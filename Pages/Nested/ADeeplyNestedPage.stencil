@@ -1,0 +1,11 @@
+<Layout>
+    <Headline1>A deeply nested page</Headline1>
+
+    <Paragraph class="mt-4">
+        This page has the path <InlineCode>/nested/a-deeply-nested-page/</InlineCode> because <InlineCode>Pages/Nested/ADeeplyNestedPage.stencil</InlineCode> was compiled into <InlineCode>Output/nested/a-deeply-nested-page/index.html</InlineCode>
+    </Paragraph>
+
+    <Paragraph class="mt-4">
+        Go back to the main page <Link href="/">here</Link>.
+    </Paragraph>
+</Layout>

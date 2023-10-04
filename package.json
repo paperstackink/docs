@@ -1,0 +1,15 @@
+{
+  "name": "@paperstack/starter",
+  "version": "0.1.0",
+  "description": "",
+  "scripts": {
+    "build": "./node_modules/.bin/paper build",
+    "dev": "./node_modules/.bin/paper dev"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@paperstack/paperstack": "^0.5.0"
+  }
+}

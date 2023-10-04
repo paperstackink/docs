@@ -1,0 +1,3 @@
+<p class="text-gray-700 leading-7 {{ class }}">
+    <slot />
+</p>

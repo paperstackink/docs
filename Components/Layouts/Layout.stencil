@@ -1,0 +1,16 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>Paperstack</title>
+
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script src="//unpkg.com/alpinejs" defer></script>
+    </head>
+    <body class="px-2 py-8 md:py-16">
+        <div class="max-w-lg mx-auto">
+            <slot />
+        </div>
+    </body>
+</html>
