@@ -1,3 +1,0 @@
-<h1 class="font-medium text-gray-900 text-lg">
-    <slot />
-</h1>

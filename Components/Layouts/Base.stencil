@@ -8,9 +8,7 @@
         <script src="https://cdn.tailwindcss.com"></script>
         <script src="//unpkg.com/alpinejs" defer></script>
     </head>
-    <body class="px-2 py-8 md:py-16">
-        <div class="max-w-lg mx-auto">
-            <slot />
-        </div>
+    <body>
+        <slot />
     </body>
 </html>
