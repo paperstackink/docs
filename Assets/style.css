@@ -1,3 +1,166 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* MonoLisa */
+@font-face {
+	font-named-instance: Regular;
+	font-display: swap;
+	font-family: "MonoLisa";
+	font-style: normal;
+	font-weight: 400;
+	src: url("/fonts/MonoLisa-Regular.ttf") format("truetype");
+}
+
+@font-face {
+	font-named-instance: Medium;
+	font-display: swap;
+	font-family: "MonoLisa";
+	font-style: normal;
+	font-weight: 500;
+	src: url("/fonts/MonoLisa-Medium.ttf") format("truetype");
+}
+
+@font-face {
+	font-named-instance: Bold;
+	font-display: swap;
+	font-family: "MonoLisa";
+	font-style: normal;
+	font-weight: 700;
+	src: url("/fonts/MonoLisa-Bold.ttf") format("truetype");
+}
+
+/* Variable Fonts */
+@supports (font-variation-settings: normal) {
+	@font-face {
+		font-family: "Favorit";
+		font-style: normal;
+		font-weight: 100 900;
+		font-display: swap;
+		src: url("/fonts/ABCFavorit-Variable.woff2") format("woff2");
+		font-named-instance: "Regular";
+	}
+
+	@font-face {
+		font-family: "Inter";
+		font-style: normal;
+		font-weight: 100 900;
+		font-display: swap;
+		src: url("/fonts/Inter-Variable.ttf") format("truetype");
+		font-named-instance: "Regular";
+	}
+}
+
+/* Static Fonts */
+@supports not (font-variation-settings: normal) {
+	/* Favorit */
+	@font-face {
+		font-named-instance: Light;
+		font-display: swap;
+		font-family: "Favorit";
+		font-style: normal;
+		font-weight: 300;
+		src: url("/fonts/ABCFavorit-Light.woff2") format("woff2");
+	}
+
+	@font-face {
+		font-named-instance: Regular;
+		font-display: swap;
+		font-family: "Favorit";
+		font-style: normal;
+		font-weight: 400;
+		src: url("/fonts/ABCFavorit-Regular.woff2") format("woff2");
+	}
+
+	@font-face {
+		font-named-instance: Medium;
+		font-display: swap;
+		font-family: "Favorit";
+		font-style: normal;
+		font-weight: 500;
+		src: url("/fonts/ABCFavorit-SemiBold.woff2") format("woff2");
+	}
+
+	@font-face {
+		font-named-instance: Bold;
+		font-display: swap;
+		font-family: "Favorit";
+		font-style: normal;
+		font-weight: 700;
+		src: url("/fonts/ABCFavorit-Bold.woff2") format("woff2");
+	}
+
+	/* Inter */
+	@font-face {
+		font-named-instance: Regular;
+		font-display: swap;
+		font-family: "Inter";
+		font-style: normal;
+		font-weight: 400;
+		src: url("/fonts/Inter-Regular.ttf") format("truetype");
+	}
+
+	@font-face {
+		font-named-instance: Bold;
+		font-display: swap;
+		font-family: "Inter";
+		font-style: normal;
+		font-weight: 700;
+		src: url("/fonts/Inter-Bold.ttf") format("truetype");
+	}
+
+	@font-face {
+		font-named-instance: ExtraBold;
+		font-display: swap;
+		font-family: "Inter";
+		font-style: normal;
+		font-weight: 800;
+		src: url("/fonts/Inter-ExtraBold.ttf") format("truetype");
+	}
+
+	@font-face {
+		font-named-instance: Black;
+		font-display: swap;
+		font-family: "Inter";
+		font-style: normal;
+		font-weight: 900;
+		src: url("/fonts/Inter-Black.ttf") format("truetype");
+	}
+}
+
+.prose {
+	font-size: 1rem;
+	line-height: 1.75rem;
+}
+
+.prose h1 {
+	font-family: "Inter";
+	font-weight: 900;
+	font-size: 1.75rem;
+	color: theme("colors.gray.900");
+}
+
+.prose p {
+	margin-top: 1.25rem;
+	margin-bottom: 1.25rem;
+	color: theme("colors.gray.700");
+	font-weight: 350;
+}
+
+.prose code {
+	display: inline-block;
+	font-size: 0.875rem;
+	background: theme("colors.gray.100");
+	color: theme("colors.gray.600");
+	border-radius: 0.1875rem;
+	line-height: 1.4rem;
+	padding: 0 0.25rem;
+	font-family: "MonoLisa";
+	font-weight: 500;
+}
+
+@media screen(md) {
+	.prose {
+		max-width: 75ch;
+	}
+}

@@ -9,7 +9,9 @@
 
         <script src="//unpkg.com/alpinejs" defer></script>
     </head>
-    <body>
-        <slot />
+    <body class="font-sans bg-accent">
+        <div class="bg-white min-h-screen">
+            <slot />
+        </div>
     </body>
 </html>
