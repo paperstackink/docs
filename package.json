@@ -4,12 +4,16 @@
   "description": "",
   "scripts": {
     "build": "./node_modules/.bin/paper build",
-    "dev": "./node_modules/.bin/paper dev"
+    "dev": "./node_modules/.bin/paper dev",
+    "styles:watch": "npx tailwindcss -i ./Assets/style.css -o ./Output/style.css --watch"
   },
   "keywords": [],
   "author": "",
   "license": "MIT",
   "dependencies": {
     "@paperstack/paperstack": "^0.5.0"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.3.3"
   }
 }

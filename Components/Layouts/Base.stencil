@@ -5,7 +5,8 @@
 
         <title>Paperstack</title>
 
-        <script src="https://cdn.tailwindcss.com"></script>
+        <link rel="stylesheet" type="text/css" href="/style.css" />
+
         <script src="//unpkg.com/alpinejs" defer></script>
     </head>
     <body>
