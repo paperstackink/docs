@@ -128,6 +128,11 @@
 	}
 }
 
+:root {
+	font-weight: 350;
+	color: theme("colors.gray.900");
+}
+
 .prose {
 	font-size: 1rem;
 	line-height: 1.75rem;
@@ -137,14 +142,12 @@
 	font-family: "Inter";
 	font-weight: 900;
 	font-size: 1.75rem;
-	color: theme("colors.gray.900");
 }
 
 .prose p {
 	margin-top: 1.25rem;
 	margin-bottom: 1.25rem;
 	color: theme("colors.gray.700");
-	font-weight: 350;
 }
 
 .prose code {
