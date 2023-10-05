@@ -1,6 +1,6 @@
 <Base>
-    <div x-data="{ open: false }">
-        <div class="sticky top-0 bg-white">
+    <div x-data="{ open: false }" class="lg:flex">
+        <div class="sticky top-0 bg-white lg:hidden">
             <header class="border-b border-gray-200 flex justify-between items-center px-2 py-2 md:px-8 md:py-3">
                 <a href="/">
                     <Logo class="w-9 h-9" />
@@ -32,17 +32,16 @@
         </div>
 
         <aside 
-            x-show="open" 
             @click.self="open = false"
-            style="display: none;" 
-            class="absolute top-0 bottom-0 left-0 right-0 bg-gray-900/20"
+            :class="open ? '!block' : 'hidden'"
+            class="hidden absolute top-0 left-0 w-full h-screen bg-gray-900/20 lg:block lg:sticky lg:w-[20rem] lg:bg-transparent"
         >
-            <div class="h-full w-3/4 bg-white border-r border-gray-200 px-2 py-2 md:px-8 md:py-3 md:w-2/5">
+            <div class="h-full w-3/4 bg-white border-r border-gray-200 px-2 py-2 md:px-8 md:py-3 md:w-2/5 lg:w-full lg:pb-8 lg:pt-9">
                 <a href="/">
                     <Logo class="w-9 h-9" />
                 </a>
 
-                <nav class="mt-8">
+                <nav class="mt-8 lg:mt-9">
                     <ul class="space-y-8">
                         <li>
                             <h5 class="text-xs font-normal text-gray-600 hover:underline">
@@ -130,10 +129,32 @@
             </div>
         </aside>
 
-        <main class="px-2 py-8 md:px-8">
-            <div class="prose">
+        <main class="px-2 py-8 md:px-8 lg:flex-1 lg:px-12 lg:py-12">
+            <article class="prose lg:mx-auto">
                 <slot/>
-            </div>
+
+                @if(next or previous)
+                    <footer class="flex justify-between mt-12">
+                        <div>
+                            @if(previous)
+                                <a href="{{ previous.url }}" class="flex leading-none text-sm font-medium">
+                                    <ChevronLeft class="text-gray-800 mr-2 w-3 h-3" />
+                                    <span>{{ previous.label }}</span>
+                                </a>     
+                            @endif       
+                        </div>
+                        <div>
+                            @if(next)
+                                <a href="{{ next.url }}" class="flex leading-none text-sm font-medium">
+                                    <span>{{ next.label }}</span>
+                                    <ChevronRight class="text-gray-800 ml-2 w-3 h-3" />
+                                </a>     
+                            @endif               
+                        </div>
+                    </footer>
+                @endif
+            </article>
+
         </main>
     </div>
 </Base>
