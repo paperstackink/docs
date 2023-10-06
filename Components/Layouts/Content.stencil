@@ -74,26 +74,24 @@
             <article class="prose lg:mx-auto">
                 <slot/>
 
-                @if(next or previous)
-                    <footer class="flex justify-between mt-12">
-                        <div>
-                            @if(previous)
-                                <a href="{{ previous.url }}" class="flex leading-none text-sm font-medium">
-                                    <ChevronLeft class="text-gray-800 mr-2 w-3 h-3" />
-                                    <span>{{ previous.label }}</span>
-                                </a>     
-                            @endif       
-                        </div>
-                        <div>
-                            @if(next)
-                                <a href="{{ next.url }}" class="flex leading-none text-sm font-medium">
-                                    <span>{{ next.label }}</span>
-                                    <ChevronRight class="text-gray-800 ml-2 w-3 h-3" />
-                                </a>     
-                            @endif               
-                        </div>
-                    </footer>
-                @endif
+                <footer class="flex justify-between mt-12">
+                    <div>
+                        @if($page.order not equals 1)
+                            <a href="{{ $pages.Docs.V0.pages.filterBy('group', group).findBy('order', $page.order - 1).path }}" class="flex leading-none text-sm font-medium">
+                                <ChevronLeft class="text-gray-800 mr-2 w-3 h-3" />
+                                <span>{{ $pages.Docs.V0.pages.filterBy('group', group).findBy('order', $page.order - 1).title }}</span>
+                            </a>     
+                        @endif       
+                    </div>
+                    <div>
+                        @if($page.order not equals ($pages.Docs.V0.pages.filterBy('group', group).size))
+                            <a href="{{ $pages.Docs.V0.pages.filterBy('group', group).findBy('order', $page.order + 1).path }}" class="flex leading-none text-sm font-medium">
+                                <span>{{ $pages.Docs.V0.pages.filterBy('group', group).findBy('order', $page.order + 1).title }}</span>
+                                <ChevronRight class="text-gray-800 ml-2 w-3 h-3" />
+                            </a>     
+                        @endif               
+                    </div>
+                </footer>
             </article>
 
         </main>
