@@ -52,7 +52,7 @@
 
                             <ul class="space-y-3 mt-3">
                                 <li>
-                                    <a href="/docs/v0/changelog" class="flex items-center text-gray-700 leading-none ">
+                                    <a href="/docs/v0/changelog" class="flex items-center text-gray-700 leading-none hover:underline">
                                         Changelog
                                     </a>
                                 </li>
@@ -72,27 +72,27 @@
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="/docs/v0/installation" class="flex items-center text-gray-700 leading-none ">
+                                    <a href="/docs/v0/installation" class="flex items-center text-gray-700 leading-none hover:underline">
                                         Installation
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="/docs/v0/directory-structure" class="flex items-center text-gray-700 leading-none ">
+                                    <a href="/docs/v0/directory-structure" class="flex items-center text-gray-700 leading-none hover:underline">
                                         Directory structure
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="/docs/v0/getting-started" class="flex items-center text-gray-700 leading-none ">
+                                    <a href="/docs/v0/getting-started" class="flex items-center text-gray-700 leading-none hover:underline">
                                         Building a site
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="/docs/v0/debugging" class="flex items-center text-gray-700 leading-none ">
+                                    <a href="/docs/v0/debugging" class="flex items-center text-gray-700 leading-none hover:underline">
                                         Debugging
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="/docs/v0/deployments" class="flex items-center text-gray-700 leading-none ">
+                                    <a href="/docs/v0/deployments" class="flex items-center text-gray-700 leading-none hover:underline">
                                         Deployments
                                     </a>
                                 </li>
@@ -108,17 +108,17 @@
 
                             <ul class="space-y-3 mt-3">
                                 <li>
-                                    <a href="/docs/v0/pages" class="flex items-center text-gray-700 leading-none ">
+                                    <a href="/docs/v0/pages" class="flex items-center text-gray-700 leading-none hover:underline">
                                         Single pages
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="/docs/v0/collections" class="flex items-center text-gray-700 leading-none ">
+                                    <a href="/docs/v0/collections" class="flex items-center text-gray-700 leading-none hover:underline">
                                         Collections
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="/docs/v0/layouts" class="flex items-center text-gray-700 leading-none ">
+                                    <a href="/docs/v0/layouts" class="flex items-center text-gray-700 leading-none hover:underline">
                                         Layouts
                                     </a>
                                 </li>
