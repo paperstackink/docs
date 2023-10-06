@@ -22,11 +22,11 @@
 
             <ol class="flex border-b border-gray-200 px-2 py-2 space-x-2 md:px-8 md:py-3">
                 <li class="flex items-center">
-                    <span class="text-sm text-gray-500 font-light">Getting started</span>
+                    <span class="text-sm text-gray-500 font-light">{{ group }}</span>
                     <ChevronRight class="w-3 h-3 ml-2 text-gray-500" />
                 </li>
                 <li class="flex items-center">
-                    <span class="text-sm text-gray-700 ">What is Paperstack?</span>
+                    <span class="text-sm text-gray-700 ">{{ title }}</span>
                 </li>
             </ol>
         </div>

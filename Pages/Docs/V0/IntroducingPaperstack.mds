@@ -3,6 +3,8 @@ template: Content
 next:
   url: /docs/v0/installation
   label: Installation
+group: Getting started
+title: What is Paperstack?
 ---
 
 # What is Paperstack?
