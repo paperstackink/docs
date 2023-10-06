@@ -20,6 +20,7 @@
                 </nav>
             </header>
 
+
             <ol class="flex border-b border-gray-200 px-2 py-2 space-x-2 md:px-8 md:py-3">
                 <li class="flex items-center">
                     <span class="text-sm text-gray-500 font-light">{{ group }}</span>
@@ -33,8 +34,9 @@
 
         <aside 
             @click.self="open = false"
+            x-trap.noscroll="open"
             :class="open ? '!block' : 'hidden'"
-            class="hidden absolute top-0 left-0 w-full h-screen bg-gray-900/20 lg:block lg:sticky lg:w-[20rem] lg:bg-transparent"
+            class="hidden absolute top-0 left-0 w-full h-screen bg-gray-900/20 overflow-y-auto lg:block lg:sticky lg:w-[20rem] lg:bg-transparent"
         >
             <div class="h-full w-3/4 bg-white border-r border-gray-200 px-2 py-2 md:px-8 md:py-3 md:w-2/5 lg:w-full lg:pb-8 lg:pt-9">
                 <a href="/">
@@ -43,87 +45,26 @@
 
                 <nav class="mt-8 lg:mt-9">
                     <ul class="space-y-8">
-                        <li>
-                            <h5 class="text-xs font-normal text-gray-600 hover:underline">
-                                <a href="/docs/v0/changelog">
-                                    Meta
-                                </a>
-                            </h5>
+                        @each(group in $pages.Index.groups)
+                            <li>
+                                <h5 class="text-xs font-normal text-gray-600 hover:underline">
+                                    <a href="{{ $pages.Docs.V0.pages.filterBy('group', group).findBy('order', 1).path }}">
+                                        {{ group }}
+                                    </a>
+                                </h5>
 
-                            <ul class="space-y-3 mt-3">
-                                <li>
-                                    <a href="/docs/v0/changelog" class="flex items-center text-gray-700 leading-none hover:underline">
-                                        Changelog
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li>
-                            <h5 class="text-xs font-normal text-gray-600 hover:underline">
-                                <a href="/docs/v0/introducing-paperstack">
-                                    Getting started
-                                </a>
-                            </h5>
+                                <ul class="space-y-3 mt-3">
+                                    @each(page in $pages.Docs.V0.pages.filterBy('group', group).sortBy('order'))
+                                        <li>
+                                            <a href="{{ page.path }}" class="flex items-center leading-none hover:underline {{ if page.path equals $page.path then 'font-normal  before:block before:h-1 before:w-3 before:bg-gray-900 before:mr-2 before:-translate-y-px' else 'text-gray-700' }}">
+                                                {{ page.title }}
+                                            </a>
+                                        </li>
+                                    @endeach
+                                </ul>
 
-                            <ul class="space-y-3 mt-3">
-                                <li>
-                                    <a href="/docs/v0/introducing-paperstack" class="flex items-center text-gray-900 leading-none font-normal  before:block before:h-1 before:w-3 before:bg-gray-900 before:mr-2 before:-translate-y-px">
-                                        What is Paperstack?
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="/docs/v0/installation" class="flex items-center text-gray-700 leading-none hover:underline">
-                                        Installation
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="/docs/v0/directory-structure" class="flex items-center text-gray-700 leading-none hover:underline">
-                                        Directory structure
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="/docs/v0/getting-started" class="flex items-center text-gray-700 leading-none hover:underline">
-                                        Building a site
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="/docs/v0/debugging" class="flex items-center text-gray-700 leading-none hover:underline">
-                                        Debugging
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="/docs/v0/deployments" class="flex items-center text-gray-700 leading-none hover:underline">
-                                        Deployments
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
-
-                        <li>
-                            <h5 class="text-xs font-normal text-gray-600 hover:underline">
-                                <a href="/docs/v0/pages">
-                                    Pages
-                                </a>
-                            </h5>
-
-                            <ul class="space-y-3 mt-3">
-                                <li>
-                                    <a href="/docs/v0/pages" class="flex items-center text-gray-700 leading-none hover:underline">
-                                        Single pages
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="/docs/v0/collections" class="flex items-center text-gray-700 leading-none hover:underline">
-                                        Collections
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="/docs/v0/layouts" class="flex items-center text-gray-700 leading-none hover:underline">
-                                        Layouts
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
+                            </li>
+                        @endeach
                     </ul>
                 </nav>
             </div>

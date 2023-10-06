@@ -1,3 +1,10 @@
 <Base>
+    <Data>
+        groups:
+            1: Meta
+            2: Getting started
+            3: Pages
+    </Data>
+
     <h1>Paperstack</h1>
 </Base>
