@@ -9,7 +9,7 @@ order: 1
 
 Paperstack is a static site generator. It can help you build static HTML websites. It takes a bunch of `.stencil` files you’ve written and compiles them into `.html` files.
 
-Stencil is a new templating language that is similar to HTML but can do more. 
+Stencil is a new templating language that is like HTML but can do more. 
 
 The main feature of Stencil is components. Components are custom HTML elements you can define and reuse throughout your project.
 

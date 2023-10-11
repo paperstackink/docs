@@ -73,27 +73,25 @@
         <main class="px-2 py-8 md:px-8 lg:flex-1 lg:px-12 lg:py-28">
             <article class="prose lg:mx-auto">
                 <slot/>
-
-                <footer class="flex justify-between mt-12">
-                    <div>
-                        @if($page.order not equals 1)
-                            <a href="{{ $pages.Docs.V0.pages.filterBy('group', group).findBy('order', $page.order - 1).path }}" class="flex leading-none text-sm font-medium">
-                                <ChevronLeft class="text-gray-800 mr-2 w-3 h-3" />
-                                <span>{{ $pages.Docs.V0.pages.filterBy('group', group).findBy('order', $page.order - 1).title }}</span>
-                            </a>     
-                        @endif       
-                    </div>
-                    <div>
-                        @if($page.order not equals ($pages.Docs.V0.pages.filterBy('group', group).size))
-                            <a href="{{ $pages.Docs.V0.pages.filterBy('group', group).findBy('order', $page.order + 1).path }}" class="flex leading-none text-sm font-medium">
-                                <span>{{ $pages.Docs.V0.pages.filterBy('group', group).findBy('order', $page.order + 1).title }}</span>
-                                <ChevronRight class="text-gray-800 ml-2 w-3 h-3" />
-                            </a>     
-                        @endif               
-                    </div>
-                </footer>
             </article>
-
+             <div class="flex justify-between mt-12 lg:max-w-prose lg:mx-auto">
+                <div>
+                    @if($page.order not equals 1)
+                        <a href="{{ $pages.Docs.V0.pages.filterBy('group', group).findBy('order', $page.order - 1).path }}" class="flex leading-none text-sm font-medium">
+                            <ChevronLeft class="text-gray-800 mr-2 w-3 h-3" />
+                            <span>{{ $pages.Docs.V0.pages.filterBy('group', group).findBy('order', $page.order - 1).title }}</span>
+                        </a>     
+                    @endif       
+                </div>
+                <div>
+                    @if($page.order not equals ($pages.Docs.V0.pages.filterBy('group', group).size))
+                        <a href="{{ $pages.Docs.V0.pages.filterBy('group', group).findBy('order', $page.order + 1).path }}" class="flex leading-none text-sm font-medium">
+                            <span>{{ $pages.Docs.V0.pages.filterBy('group', group).findBy('order', $page.order + 1).title }}</span>
+                            <ChevronRight class="text-gray-800 ml-2 w-3 h-3" />
+                        </a>     
+                    @endif               
+                </div>
+            </div>
         </main>
     </div>
 </Base>

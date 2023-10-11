@@ -6,3 +6,37 @@ order: 2
 ---
 
 # Installation
+
+## Node
+
+Paperstack requires Node 20.1 or higher. If you don’t have Node installed or are using an old version you can use [NVM](https://github.com/nvm-sh/nvm) to install it.
+
+## Installing CLI tool
+
+When you have Node installed you can run the following command:
+
+```
+npm install -g @paperstack/paperstack
+```
+
+This will install the `paper` tool globally.
+
+## Creating a project
+
+Run the following command to create a new project:
+
+```
+paper create example-website
+```
+
+This creates a new project in the `example-website` folder.
+
+After you’ve created a project you can run a local development server:
+
+```
+cd example-website
+
+npm run dev
+```
+
+Your site is now available at [localhost:8080](http://localhost:8080).

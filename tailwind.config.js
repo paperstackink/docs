@@ -17,6 +17,9 @@ module.exports = {
         headline: ['"Inter"', ...defaultTheme.fontFamily.sans],
         mono: ['"MonoLisa"', ...defaultTheme.fontFamily.mono],
       },
+      maxWidth: {
+        prose: "60ch",
+      },
     },
   },
   plugins: [],

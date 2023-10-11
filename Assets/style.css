@@ -144,13 +144,27 @@
 	font-size: 1.75rem;
 }
 
+.prose h2 {
+	margin-top: 1.75rem;
+	font-weight: 500;
+}
+
 .prose p {
 	margin-top: 1.25rem;
 	margin-bottom: 1.25rem;
 	color: theme("colors.gray.700");
 }
 
-.prose code {
+.prose h1 + p,
+.prose h2 + p,
+.prose h3 + p,
+.prose h4 + p,
+.prose h5 + p,
+.prose h6 + p {
+	margin-top: 0;
+}
+
+.prose :not(pre) code {
 	display: inline-block;
 	font-size: 0.875rem;
 	background: theme("colors.gray.100");
@@ -160,6 +174,22 @@
 	padding: 0 0.25rem;
 	font-family: "MonoLisa";
 	font-weight: 500;
+}
+
+.prose pre {
+	font-size: 0.875rem;
+	background: theme("colors.gray.100");
+	line-height: 1.6667;
+	border-radius: 0.4rem;
+	padding: 0.75rem 1rem;
+}
+
+.prose a {
+	color: theme("colors.accent");
+}
+
+.prose a:hover {
+	text-decoration: underline;
 }
 
 @media screen(md) {
