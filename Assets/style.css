@@ -183,12 +183,33 @@
 	padding: 0.75rem 1rem;
 }
 
-.prose a {
+.prose :not(h1, h2, h3, h4, h5, h6) a {
 	color: theme("colors.accent");
 }
 
-.prose a:hover {
+.prose :not(h1, h2, h3, h4, h5, h6) a:hover {
 	text-decoration: underline;
+}
+
+.prose h1 a:hover,
+.prose h2 a:hover,
+.prose h3 a:hover,
+.prose h4 a:hover,
+.prose h5 a:hover,
+.prose h6 a:hover {
+	position: relative;
+}
+
+.prose h1 a:hover:before,
+.prose h2 a:hover:before,
+.prose h3 a:hover:before,
+.prose h4 a:hover:before,
+.prose h5 a:hover:before,
+.prose h6 a:hover :before {
+	content: "#";
+	position: absolute;
+	right: 100%;
+	margin-right: 0.5rem;
 }
 
 .prose table {
