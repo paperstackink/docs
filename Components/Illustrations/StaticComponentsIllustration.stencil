@@ -1,0 +1,21 @@
+<div class="h-full flex items-center justify-center">
+	<div class="w-3/5 h-[55%] border-x-2 border-gray-300 bg-white flex items-center justify-center space-x-4" style="transform: rotateX(60deg) rotateZ(45deg);">
+		<div class="relative h-1/2 aspect-square border border-gray-400 border-dashed bg-gray-50">
+			<div class="absolute inset-0" style="transform: translate(-50%, -50%);">
+				<div class="bg-gray-200 h-full flex items-center justify-center border-2 border-gray-300">
+					<Image class="w-1/2 h-1/2 text-gray-400" />
+				</div>
+			</div>
+		</div>
+		<div class="relative h-1/2 aspect-square border border-gray-400 border-dashed bg-gray-50">
+			<div class="absolute inset-0" style="transform: translate(-50%, -50%);">
+				<div class="flex flex-col justify-around w-full h-full bg-white border-2 border-gray-300 p-3">
+					<div class="bg-gray-500 h-[15%]"></div>
+					<div class="bg-gray-300 h-[10%] w-[90%]"></div>
+					<div class="bg-gray-300 h-[10%] w-[60%]"></div>
+					<div class="bg-gray-300 h-[10%] w-[80%]"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

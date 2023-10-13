@@ -26,17 +26,19 @@
     <section class="mt-20 grid gap-y-8 px-2 md:mx-8 md:grid-cols-2 md:gap-x-16 md:items-center lg:max-w-[60rem] lg:mx-auto lg:gap-x-20">
         <div class="text-lg md:order-last">
             <h2 class="font-medium">Static components</h2>
-            <p class="mt-1">Make your own re-usable HTML elements with components.</p>
+            <p class="mt-1">Make your own reusable HTML elements with components.</p>
             <p class="mt-2">Compose small components together to create larger elements, sections and layouts.</p>
         </div>
-        <div class="h-[20rem] bg-gray-100 rounded-lg"></div>
+        <div class="h-[20rem] bg-gray-100 rounded-lg">
+            <StaticComponentsIllustration />
+        </div>
     </section>
 
     <section class="mt-20 grid gap-y-8 px-2 md:mx-8 md:grid-cols-2 md:gap-x-16 md:items-center lg:max-w-[60rem] lg:mx-auto lg:gap-x-20">
         <div class="text-lg">
             <h2 class="font-medium">Markdown</h2>
             <p class="mt-1">Write your content in markup or markdown. </p>
-            <p class="mt-2">You have access to all your components in both markup and markdown. This allows you to embed any markup or any of your re-usable components inside your content.</p>
+            <p class="mt-2">You have access to all your components in both markup and markdown. This allows you to embed any markup or any of your reusable components inside your content.</p>
         </div>
         <div class="h-[20rem] bg-gray-100 rounded-lg"></div>
     </section>
