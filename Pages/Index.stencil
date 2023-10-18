@@ -29,8 +29,96 @@
             <p class="mt-1">Make your own reusable HTML elements with components.</p>
             <p class="mt-2">Compose small components together to create larger elements, sections and layouts.</p>
         </div>
-        <div class="h-[20rem] bg-gray-100 rounded-lg">
-            <StaticComponentsIllustration />
+        <div 
+            class="relative h-[20rem] bg-gray-100 rounded-lg group hover:rounded-r-none"
+            x-data="{ selected: null, tab: 'definition' }"
+        >
+            <div class="h-full flex items-center justify-center">
+                <div 
+                    class="w-3/5 h-[55%] border-x-2 border-gray-300 bg-white flex items-center justify-center space-x-4" style="transform: rotateX(60deg) rotateZ(45deg);"
+                    @mouseover.self="tab = 'definition'; selected = 'background'"
+                    @mouseleave="selected = null"
+                >
+                    <div 
+                        class="relative h-1/2 aspect-square border border-gray-400 border-dashed bg-gray-50"
+                        @mouseover.self="tab = 'definition'; selected = 'image-dropzone'"
+                    >
+                        <div 
+                            class="absolute inset-0" style="transform: translate(-50%, -50%);"
+                            @mouseover="tab = 'instance'; selected = 'image'"
+                        >
+                            <div class="bg-gray-200 h-full flex items-center justify-center border-2 border-gray-300">
+                                <Image class="w-1/2 h-1/2 text-gray-400" />
+                            </div>
+                        </div>
+                    </div>
+                    <div 
+                        class="relative h-1/2 aspect-square border border-gray-400 border-dashed bg-gray-50"
+                        @mouseover.self="tab = 'definition'; selected = 'text-dropzone'"
+                    >
+                        <div 
+                            class="absolute inset-0" style="transform: translate(-50%, -50%);"
+                            @mouseover="tab = 'instance'; selected = 'text'"
+                        >
+                            <div class="flex flex-col justify-around w-full h-full bg-white border-2 border-gray-300 p-3">
+                                <div class="bg-gray-500 h-[15%]"></div>
+                                <div class="bg-gray-300 h-[10%] w-[90%]"></div>
+                                <div class="bg-gray-300 h-[10%] w-[60%]"></div>
+                                <div class="bg-gray-300 h-[10%] w-[80%]"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="hidden lg:group-hover:block absolute inset-y-0 bg-gray-100 left-full rounded-r-lg pl-20" style="width: calc(100% + 5rem)">
+                <nav>
+                    <ul class="flex space-x-2 mt-2">
+                        <li>
+                            <button 
+                                type="button" 
+                                class="text-sm rounded px-4 py-2" 
+                                :class="tab === 'definition' ? 'bg-gray-200' : ''"
+                                @click="tab = 'definition'"
+                            >
+                                TextWithImageSection.stencil
+                            </button>
+                        </li>
+                        <li>
+                            <button 
+                                type="button" 
+                                class="text-sm rounded px-4 py-2"
+                                :class="tab === 'instance' ? 'bg-gray-200' : ''"
+                                @click="tab = 'instance'"
+                            >
+                                Pages/Index.stencil
+                            </button>
+                        </li>
+                    </ul>
+                </nav>
+                <template x-if="tab === 'definition'" >
+                    <code class="text-gray-400 block mt-4 space-y-1">
+                        <div :class="selected === 'background' ? 'text-gray-700' : ''"><span>&#60;</span>section<span>&#62;</span></div>
+                            <div class="pl-8"><span>&#60;</span>div class="left"<span>&#62;</span></div>
+                                <div class="pl-16" :class="selected === 'image-dropzone' ? 'text-gray-700' : ''"><span>&#60;</span>img src="<span>&lcub;</span><span>&lcub;</span> image <span>&rcub;</span><span>&rcub;</span>" /<span>&#62;</span></div>
+                            <div class="pl-8"><span>&#60;</span>/div<span>&#62;</span></div>
+                            <div class="pl-8"><span>&#60;</span>div class="right"<span>&#62;</span></div>
+                                <div class="pl-16" :class="selected === 'text-dropzone' ? 'text-gray-700' : ''"><span>&#60;</span>slot /<span>&#62;</span></div>
+                            <div class="pl-8"><span>&#60;</span>/div<span>&#62;</span></div>
+                        <div :class="selected === 'background' ? 'text-gray-700' : ''"><span>&#60;</span>/section<span>&#62;</span></div>
+                    </code>
+                </template>
+                <template x-if="tab === 'instance'">
+                    <code class="text-gray-400 block mt-4 space-y-1">
+                        <div><span>&#60;</span>TextWithImageSection</div>
+                        <div class="pl-8" :class="selected === 'image' ? 'text-gray-700' : ''">image="/images/1.png"</div>
+                        <div><span>&#62;</span></div>
+                            <div class="pl-8" :class="selected === 'text' ? 'text-gray-700' : ''"><span>&#60;</span>Headline2<span>&#62;</span>...<span>&#60;</span>/Headline2<span>&#62;</span></div>
+                            <div class="pl-8" :class="selected === 'text' ? 'text-gray-700' : ''"><span>&#60;</span>Paragraph<span>&#62;</span>...<span>&#60;</span>/Paragraph<span>&#62;</span></div>
+                            <div class="pl-8" :class="selected === 'text' ? 'text-gray-700' : ''"><span>&#60;</span>Paragraph<span>&#62;</span>...<span>&#60;</span>/Paragraph<span>&#62;</span></div>
+                        <div :class="selected === 'background' ? 'text-gray-700' : ''"><span>&#60;</span>/TextWithImageSection<span>&#62;</span></div>
+                    </code>
+                </template>
+            </div>
         </div>
     </section>
 
