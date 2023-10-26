@@ -4,6 +4,9 @@
             1: Meta
             2: Getting started
             3: Pages
+            4: Components
+            5: Templates
+            6: Assets
     </Data>
 
     <header class="px-2 py-2 md:px-8 md:py-9">

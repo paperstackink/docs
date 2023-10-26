@@ -27,9 +27,9 @@ The URL of the page is derived from the file name.
 
 ## Layout
 
-In markdown pages it’s required to specify a template. 
+On markdown pages, it’s required to specify a layout. 
 
-The template is a Stencil component with a `<‎slot>` element that will be used as a [layout](/docs/v0/layouts). The slot element will be replaced with the content from the markdown file:
+The `layout` is a Stencil component with a `<‎slot>` element that will be used as a [layout](/docs/v0/layouts). The content from the markdown file will be inserted into the `<slot />` element.
 
 ```
 // Components/Layouts/Base.stencil
@@ -43,12 +43,12 @@ The template is a Stencil component with a `<‎slot>` element that will be used
 </html>
 ```
 
-In the markdown page the template is specified in frontmatter:
+On a markdown page, the layout is specified in front matter:
 
 ```
 // Pages/Books/TheCivilWarInFrance.mds
 ---
-template: Base
+layout: Base
 ---
 
 # The Civil War in France
@@ -60,7 +60,7 @@ All [components](/docs/v0/components) and regular HTML elements can be used insi
 
 ```
 ---
-template: Base
+layout: Base
 ---
 
 # The Civil War in France
@@ -75,11 +75,11 @@ This critical examination of the Paris Commune of 1871 highlighted significant a
 
 ## Data
 
-It’s possible to define [custom data](/docs/v0/data#custom-data) via frontmatter. This is meta data that is mostly useful when referencing the page in other places like a loop.
+It’s possible to define [custom data](/docs/v0/data#custom-data) via front matter. This is metadata that is mostly useful when referencing the page in other places, like a loop.
 
 ```
 ---
-template: Base
+layout: Base
 title: The Civil War in France
 year: 1871
 order: 1 

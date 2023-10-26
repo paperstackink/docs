@@ -9,11 +9,11 @@ order: 2
 
 ## Node
 
-Paperstack requires Node 20.1 or higher. If you don’t have Node installed or are using an old version you can use [NVM](https://github.com/nvm-sh/nvm) to install it.
+Paperstack requires Node 20.1 or higher. If you don’t have Node installed or are using an old version, you can use [NVM](https://github.com/nvm-sh/nvm) to install it.
 
-## Installing CLI tool
+## Installing the CLI tool
 
-When you have Node installed you can run the following command:
+When you have Node installed, you can run the following command:
 
 ```
 npm install -g @paperstack/paperstack
@@ -31,7 +31,7 @@ paper create example-website
 
 This creates a new project in the `example-website` folder.
 
-After you’ve created a project you can run a local development server:
+After you’ve created a project, you can run a local development server:
 
 ```
 cd example-website

@@ -43,7 +43,7 @@ A common pattern is to create a `Base` layout that contains only the bare minimu
 </html>
 ```
 
-All pages that uses the `Base` layout now has access to the CSS and JS.
+All pages that use the `Base` layout now have access to the CSS and JS.
 
 ```
 // Pages/Index.stencil
@@ -59,9 +59,9 @@ All pages that uses the `Base` layout now has access to the CSS and JS.
 
 ## Extending the base layout
 
-Using the `Base` layout for one-off pages is useful. But some pages might share more markup that what’s included in `Base`.
+Using the `Base` layout for one-off pages is useful. But some pages might share more markup than what’s included in `Base`.
 
-A common pattern is to create layouts that extends other layouts. You might create a layout that include the page navigation as well:
+A common pattern is to create layouts that extend other layouts. You might create a layout that includes the page navigation as well:
 
 ```
 // Components/Layouts/Page.stencil

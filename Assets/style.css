@@ -249,6 +249,7 @@
 	background-size: 2rem;
 	background-repeat: no-repeat;
 	background-position: 1.5rem 1rem;
+	margin-bottom: 2.5rem;
 }
 
 .prose blockquote:after {
@@ -265,6 +266,11 @@
 
 .prose blockquote p {
 	margin: 0;
+}
+
+.prose ul {
+	list-style-type: disc;
+	margin-left: 1rem;
 }
 
 @media screen(md) {

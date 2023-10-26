@@ -7,13 +7,13 @@ order: 3
 
 # Collections
 
-Collection pages serves as an index for other pages. It could be the home page or `/articles`.
+Collection pages serve as an index for other pages. It could be the home page or `/articles`.
 
-The main purpose of these pages are to list pages in a collection i.e. all blog posts or all articles in a specific category.
+The main purpose of collection pages is to list related pages, i.e., all blog posts or all articles in a specific category.
 
 ## Looping over pages
 
-Usually you will render all links with a [loop](/docs/v0/loops). All pages are available through the `$pages` record.
+Usually, you will render all links in a [loop](/docs/v0/loops). All pages are available through the `$pages` record.
 
 ```
 @‎each(page in $pages.Articles.pages)
@@ -23,7 +23,7 @@ Usually you will render all links with a [loop](/docs/v0/loops). All pages are a
 @‎endeach
 ```
 
-It prints the title case version of the file name. If you wish to customise the title you can add [custom data](/docs/v0/data#custom-data) to each page.
+It prints the title-case version of the file name. If you wish to customise the title, you can add [custom data](/docs/v0/data#custom-data) to each page.
 
 ```md
 // Pages/Articles/ValuePriceAndProfit.mds
@@ -82,7 +82,7 @@ Or by sort order:
 
 ## Showing only certain pages
 
-In some cases you might only want to show certain pages:
+In some cases, you might only want to show certain pages:
 
 ```
 // Pages/Articles/ValuePriceAndProfit.mds

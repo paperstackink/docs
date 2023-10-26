@@ -13,12 +13,11 @@ You’ll likely need to debug your site at some point. The `dump` method is a de
 dump($pages)
 ```
 
-If you open the page in a browser you can now inspect the value you dumped. 
+If you open the page in a browser, you can now inspect the value you dumped. 
 
 
 ## Global records
 
-Each page some records that contain information about the page, the site and the current scope. You can use these to display information or you can ‘dump’ them to inspect what data is available.
+Each page has records that contain information about the site, the page and the current scope. You can use these to display information, or you can ‘dump’ them to inspect what data is available.
 
 See the list of records in the [Data section](/docs/v0/data).
-
