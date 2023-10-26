@@ -1,5 +1,5 @@
 ---
-template: Content
+layout: Content
 group: Components
 title: Dynamic components
 order: 3

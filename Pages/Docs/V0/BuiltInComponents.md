@@ -1,5 +1,5 @@
 ---
-template: Content
+layout: Content
 group: Components
 title: Built-in components
 order: 4

@@ -1,5 +1,5 @@
 ---
-template: Content
+layout: Content
 group: Templates
 title: '@each directive'
 order: 5

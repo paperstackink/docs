@@ -1,5 +1,5 @@
 ---
-template: Content
+layout: Content
 group: Pages
 title: Markdown pages
 order: 2

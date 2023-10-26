@@ -1,5 +1,5 @@
 ---
-template: Content
+layout: Content
 group: Components
 title: Attributes
 order: 2

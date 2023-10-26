@@ -1,5 +1,5 @@
 ---
-template: Content
+layout: Content
 group: Pages
 title: Collections
 order: 3
@@ -28,7 +28,7 @@ It prints the title-case version of the file name. If you wish to customise the 
 ```md
 // Pages/Articles/ValuePriceAndProfit.mds
 ---
-template: Base
+layout: Base
 title: Value, Price and Profit
 ---
 
@@ -51,7 +51,7 @@ Items in `$pages` are sorted in alphabetical order. You likely want to order pag
 ```
 // Pages/Articles/ValuePriceAndProfit.mds
 ---
-template: Base
+layout: Base
 title: Value, Price and Profit
 date: 20/06/1865
 order: 1
@@ -87,7 +87,7 @@ In some cases, you might only want to show certain pages:
 ```
 // Pages/Articles/ValuePriceAndProfit.mds
 ---
-template: Base
+layout: Base
 featured: true
 ---
 

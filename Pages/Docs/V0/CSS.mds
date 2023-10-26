@@ -1,5 +1,5 @@
 ---
-template: Content
+layout: Content
 group: Assets
 title: CSS
 order: 2

@@ -1,5 +1,5 @@
 ---
-template: Content
+layout: Content
 group: Templates
 title: Data
 order: 2
@@ -82,7 +82,7 @@ In markdown pages, data is added with Yaml in front matter:
 
 ```
 ---
-template: Base
+layout: Base
 title: The Poverty of Philosophy
 year: 1847
 order: 1 

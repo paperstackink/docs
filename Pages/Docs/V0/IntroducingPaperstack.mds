@@ -1,5 +1,5 @@
 ---
-template: Content
+layout: Content
 group: Getting started
 title: What is Paperstack?
 order: 1

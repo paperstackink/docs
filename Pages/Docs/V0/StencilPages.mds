@@ -1,5 +1,5 @@
 ---
-template: Content
+layout: Content
 group: Pages
 title: Stencil pages
 order: 1

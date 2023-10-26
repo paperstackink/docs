@@ -1,5 +1,5 @@
 ---
-template: Content
+layout: Content
 group: Pages
 title: Layouts
 order: 4
@@ -26,7 +26,7 @@ Most sites share some markup between pages. One way to avoid repeating that mark
 
 > Layouts are regular [components](/docs/v0/components). There is nothing that differentiates a layout from any other component. 
 
-## Base template
+## Base layout
 
 A common pattern is to create a `Base` layout that contains only the bare minimum that is reused across pages. That usually means stuff in the `<head>` tag:
 
