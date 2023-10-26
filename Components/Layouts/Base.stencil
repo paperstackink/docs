@@ -1,6 +1,6 @@
 <html lang="en">
     <head>
-        <title>Paperstack</title>
+        <title>{{ if title then title + ' | Paperstack' else 'Paperstack'}}</title>
 
         <!-- Meta -->
         <meta charset="UTF-8">
