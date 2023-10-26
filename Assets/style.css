@@ -298,12 +298,12 @@
 	background-color: white;
 }
 .scrollbar-left::-webkit-scrollbar-track {
-	border-right: 1px solid theme("colors.gray.900");
+	border-right: 1px solid theme("colors.gray.200");
 }
 .scrollbar-right::-webkit-scrollbar-track {
-	border-left: 1px solid theme("colors.gray.900");
+	border-left: 1px solid theme("colors.gray.200");
 }
 
 .scrollbar::-webkit-scrollbar-thumb {
-	background: black;
+	background: theme("colors.gray.300");
 }
