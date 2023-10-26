@@ -1,7 +1,6 @@
 <Base>
     <Data>
         groups:
-            1: Meta
             2: Getting started
             3: Pages
             4: Components
