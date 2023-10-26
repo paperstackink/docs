@@ -40,3 +40,5 @@ npm run dev
 ```
 
 Your site is now available at [localhost:8080](http://localhost:8080).
+
+> Paperstack is still very new and things might change as we discover what works best.
