@@ -1,0 +1,72 @@
+---
+template: Content
+group: Templates
+title: Expressions
+order: 3
+---
+
+# Expressions
+
+Everything between `{‎{ }}` or inside a directive `@()` is an expression.
+
+The simplest expression is to print the value of a variable:
+
+```
+{‎{ title }}
+```
+
+If there is a variable called `title` it will print the value. If `title` doesn’t exist, it won’t print anything.
+
+You can do math:
+
+```
+{‎{ 1 + 2 * 3 / 4 }}
+```
+
+You can do less than/greater than:
+
+```
+{‎{ 1 less than 2 }}
+
+{‎{ 2 less than or equals 2 }}
+
+{‎{ 2 greater than 1 }}
+
+{‎{ 2 greater than or equals 2 }}
+```
+
+You can do and/or logic:
+
+```
+{‎{ identifier1 and identifier2 }}
+
+{‎{ identifier or 'default value' }}
+```
+
+You can group sub-expressions:
+
+```
+{‎{ (1 + 2) * 3 / 4 }}
+```
+
+You can use equals/not equals operators:
+
+```
+{‎{ identifier equals 'blue' }}
+
+{‎{ identifier not equals 'blue' }}
+```
+
+You can use if/else:
+
+```
+{‎{ if variant equals 'primary' then 'bg-gray-900' else 'bg-gray-200' }}
+```
+
+Finally, you can call methods and functions:
+
+```
+{‎{ dump($pages) }}
+
+{‎{ $pages.sortBy('name') }}
+```

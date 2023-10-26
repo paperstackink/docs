@@ -1,0 +1,69 @@
+---
+template: Content
+group: Templates
+title: Records
+order: 1
+---
+
+# Records
+
+Records are a built-in data type in Stencil. Records are key/value stores. Each key is a string, and each value can be any of the built-in data types, including nested records. 
+
+Records can be looped in with [@each](/docs/v0/each-directive).
+
+## sortBy
+
+`sortBy` sorts all the properties of a record based on a field:
+
+```
+$pages.Articles.pages.sortBy('name', 'descending')
+```
+
+## filterBy
+
+`filterBy` removes items from a record based on the field and operator:
+
+```
+$pages.Articles.pages.filterBy('name', 'not equals', 'Index')
+```
+
+The 2nd parameter is the operator to use for the check. The following operators are valid:
+
+- `equals`
+- `not equals`
+- `greater than`
+- `greater than or equals`
+- `less than`
+- `less than or equals`
+- `contains`
+- `truthy`
+- `not truthy`
+- `exists`
+- `not exists`
+
+If the operator requires a value to compare against, that is the  3rd parameter.
+
+
+## findBy
+
+`findBy` finds the first property of a record that matches the criteria:
+
+```
+$pages.Articles.pages.findBy('name', 'equals', 'Index')
+```
+
+The 2nd parameter is the operator to use for the check. The following operators are valid:
+
+- `equals`
+- `not equals`
+- `greater than`
+- `greater than or equals`
+- `less than`
+- `less than or equals`
+- `contains`
+- `truthy`
+- `not truthy`
+- `exists`
+- `not exists`
+
+If the operator requires a value to compare against, that is the  3rd parameter.

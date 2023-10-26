@@ -1,0 +1,110 @@
+---
+template: Content
+group: Templates
+title: Data
+order: 2
+---
+
+# Data
+
+On every page and component, a number of [records](/docs/v0/records) are available for use.
+
+## $pages
+
+`$pages` contains information about the `Pages` directory. It mirrors the structure of `Pages` so you can access a subdirectory:
+
+```
+$pages.Articles
+```
+
+Or you can access a deeply nested page:
+
+```
+$pages.Articles.HowToBuildAWebsite
+```
+
+`$pages` can be used to dynamically render a list of links on a collection page or in a navigation with a [loop](/docs/v0/each-directive).
+
+A subdirectory in `$pages` contains information about all the nested pages and directories inside that directory.
+
+If you want to only access pages inside a directory, there is a property on the record called `pages`:
+
+```
+$pages.Articles.pages
+```
+
+If you want to access all pages in that directory or in any subdirectories, you can use `allPages`:
+
+```
+$pages.Articles.allPages
+```
+
+Similar properties exist for directories.
+
+
+## $page
+
+`$page` represents the current page. It contains properties such as `name`, `path`, and `slug` as well as any [custom data](/docs/v0/data#custom-data) you’ve added to the page.
+
+
+## $data
+
+`$data` contains any [custom data](/docs/v0/data#custom-data) you’ve defined for a page. All properties in `$data` are also available globally, so `$data` is mostly useful for debugging.
+
+
+## $attributes
+
+`$attributes` is only available inside a component and contains all attributes that were passed to the component. It’s mostly useful for debugging purposes or to apply all attributes to a nested element in the component:
+
+```
+// Components/ButtonWithHelp.stencil
+<div>
+	<button #bind="$attributes">
+		<slot />
+	</button>
+	<span>
+		{‎{ hint }}
+	</span>
+</div>
+```
+
+
+## $config
+
+`$config` contains all configuration from the `Config` directory.
+
+
+## Custom data
+
+It’s possible to add custom data to a page. This can be meta information like a publishing date or information used in a loop like an order property.
+
+In markdown pages, data is added with Yaml in front matter:
+
+```
+---
+template: Base
+title: The Poverty of Philosophy
+year: 1847
+order: 1 
+---
+
+# The Poverty of Philosophy
+```
+
+In Stencil pages, data is added with Yaml in a special `Data` component:
+
+```
+<Base>
+	<Data>
+		title: The Poverty of Philosophy
+		year: 1847
+		order: 1 
+	</Data>
+
+	<Headline1>
+		The Poverty of Philosophy
+	</Headline1>
+</Base>
+```
+
+> `<‎Data>` can only be used in a page file. The data will not be available if it’s defined inside a component.
