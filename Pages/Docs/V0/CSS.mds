@@ -1,0 +1,89 @@
+---
+template: Content
+group: Assets
+title: CSS
+order: 2
+---
+
+# CSS
+
+You can use any CSS solution you want. The starter template uses [Tailwind CSS](https://tailwindcss.com/) by default.
+
+Tailwind is imported via CDN:
+
+```
+// Components/Layouts/Base.stencil
+<html>
+	<head>
+		<script src="https://cdn.tailwindcss.com"></script>
+	</head>
+
+	...
+</html>
+```
+
+
+## Running Tailwind locally
+
+If you want to run Tailwind locally and utilise the JIT engine, you can do the following:
+
+1. Follow the instructions on how to use the [Tailwind CLI tool](https://tailwindcss.com/docs/installation)
+2. Create a `style.css` file in the `Assets` directory
+	```
+	@tailwind base;
+	@tailwind components;
+	@tailwind utilities;
+	```
+3. Update `tailwind.config.js` to watch for content in the `Output` directory
+	```
+	// tailwind.config.js
+	module.exports = {
+		content: [
+			"./Output/**/*.html",
+		],
+	}
+	```
+4. Add the following scripts to your `package.json` file
+	```
+	{
+		"scripts": {
+			"build": "./node_modules/.bin/paper build",
+			"dev": "./node_modules/.bin/paper dev",
+			"styles:watch": "npx tailwindcss -i ./Assets/style.css -o ./Output/style.css --watch",
+			"styles:build": "npx tailwindcss -i ./Assets/style.css -o ./Output/style.css"
+		}
+	}
+	```
+5. Run `npm run styles:watch` in parallel to running to `npm run dev`
+6. Run `npm run styles:build` when running `npm run build`
+
+
+## Plain CSS
+
+If you want to write plain CSS without processing, you can add a `.css` file to the `Assets` directory.
+
+```
+// Assets/style.css
+body {
+	background: red;	
+}
+```
+
+```
+// Components/Layouts/Base.stencil
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="/style.css" />
+	</head>
+	<body>
+		<slot />
+	</body>
+</html>
+```
+
+
+## Other CSS solutions
+
+If your CSS solution has a build step, then you can set the `Output` directory as the output for the generated CSS. If the solution supports watching files, it should also watch `Output`.
+
+> More CSS solutions will be interated into Paperstack. If you are unsure how to implement your CSS stack you can [reach out](https://twitter.com/bjornlindholmdk) or [create a new issue](https://github.com/paperstackink/paperstack/issues/new).

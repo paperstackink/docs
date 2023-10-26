@@ -273,6 +273,15 @@
 	margin-left: 1rem;
 }
 
+.prose ol {
+	list-style-type: decimal;
+	margin-left: 1.75rem;
+}
+
+.prose li pre {
+	margin-bottom: 1.25rem;
+}
+
 @media screen(md) {
 	.prose {
 		max-width: 60ch;

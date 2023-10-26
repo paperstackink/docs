@@ -1,0 +1,55 @@
+---
+template: Content
+group: Assets
+title: JavaScript
+order: 3
+---
+
+# JavaScript
+
+You can use any JS approach you want. The stater template includes [Alpine.js](https://alpinejs.dev/) by default.
+
+Alpine is imported via CDN:
+
+```
+// Components/Layouts/Base.stencil
+<html>
+	<head>
+		<script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+	</head>
+
+	...
+</html>
+```
+
+
+## Plain JavaScript
+
+If you want to write plain JS, you can add a `.js` file in the `Assets` directory.
+
+```
+// Assets/script.js
+
+console.log('Hello')
+```
+
+```
+// Components/Layouts/Base.stencil
+<html>
+	<head>
+		<script src="/script.js"></script>
+	</head>
+	<body>
+		<slot />
+	</body>
+</html>
+```
+
+
+## Other JS solutions
+
+The easiest way to include other JS solutions is via CDN.
+
+If you choose to build the JS locally, you can set the `Output` directory as the target for the generated file.
+
+> JS processing will be added to Paperstack. If you are unsure how to implement your CSS stack you can [reach out](https://twitter.com/bjornlindholmdk) or [create a new issue](https://github.com/paperstackink/paperstack/issues/new).
