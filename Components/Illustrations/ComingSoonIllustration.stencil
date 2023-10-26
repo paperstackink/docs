@@ -1,0 +1,8 @@
+<div class="relative w-1/2">
+	<div class="h-2/5 bg-white border-2 border-gray-900 flex items-center justify-center">
+		<Image class="w-8 h-8" />
+	</div>
+	<div class="absolute inset-x-0 text-center mt-1">
+		<p class="text-xs text-gray-700">Illustration coming at some point</p>
+	</div>
+</div>
