@@ -1,0 +1,102 @@
+---
+template: Content
+group: Pages
+title: Layouts
+order: 4
+---
+
+# Layouts
+
+Most sites share some markup between pages. One way to avoid repeating that markup us to create layouts.
+
+```
+// Components/Layouts/Base.stencil
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" type="text/css" href="/style.css" />
+		<title>My website</title>
+	</head>
+	<body>
+		<slot />
+	</body>
+</html>
+```
+
+> Layouts are regular [components](/docs/v0/components). There is nothing that differentiates a layout from any other component. 
+
+## Base template
+
+A common pattern is to create a `Base` layout that contains only the bare minimum that is reused across pages. That usually means stuff in the `<head>` tag:
+
+```
+// Components/Layouts/Base.stencil
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="/style.css" />
+        <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+	</head>
+	<body>
+		<slot />
+	</body>
+</html>
+```
+
+All pages that uses the `Base` layout now has access to the CSS and JS.
+
+```
+// Pages/Index.stencil
+<Base>
+	<h1 class="title">
+		Philosopher's Inkwell
+	</h1>
+	<p class="tagline">
+		A collection of important works from the 1800's
+	</p>
+</Base>
+```
+
+## Extending the base layout
+
+Using the `Base` layout for one-off pages is useful. But some pages might share more markup that what’s included in `Base`.
+
+A common pattern is to create layouts that extends other layouts. You might create a layout that include the page navigation as well:
+
+```
+// Components/Layouts/Page.stencil
+<Base>
+	<nav>
+		<NavigationLink href="/">
+			<LogoIcon />
+		</NavigationLink>
+		<NavigationLink href="/articles">
+			Articles
+		</NavigationLink>
+		<NavigationLink href="/about">
+			About us
+		</NavigationLink>
+	</nav>
+
+	<main>
+		<slot />
+	</main>
+</Base>
+```
+
+It can be a good idea to create several layouts with different granularity. You might create a layout specifically for articles:
+
+```
+// Components/Layouts/Article.stencil
+<Page>
+	<h1>{{ title }}</h1>
+
+	<div>
+		Posted on {‎{ published_date }} by {‎{ author.name }}
+	</div>
+
+	<article>
+		<slot />
+	</article>
+</Page>
+```

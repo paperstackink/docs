@@ -63,7 +63,7 @@ The `Assets` directory contains static resources like fonts, icons, images and o
 
 All files are copied into `Output` when building the site.
 
-`Assets` can contain subdirectories. All sub directives will be preserved when building the site.
+`Assets` can contain subdirectories. All subdirectories will be preserved when building the site.
 
 | Source file              | Path               |
 | ------------------------ | ------------------ |

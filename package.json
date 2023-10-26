@@ -5,7 +5,8 @@
   "scripts": {
     "build": "./node_modules/.bin/paper build",
     "dev": "./node_modules/.bin/paper dev",
-    "styles:watch": "npx tailwindcss -i ./Assets/style.css -o ./Output/style.css --watch"
+    "styles:watch": "npx tailwindcss -i ./Assets/style.css -o ./Output/style.css --watch",
+    "styles:build": "npx tailwindcss -i ./Assets/style.css -o ./Output/style.css"
   },
   "keywords": [],
   "author": "",

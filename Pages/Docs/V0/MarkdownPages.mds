@@ -1,0 +1,89 @@
+---
+template: Content
+group: Pages
+title: Markdown pages
+order: 2
+---
+
+# Markdown pages
+
+You can create a new markdown page by running the following command in a terminal:
+
+```
+paper make:page /books --layout=Base --markdown
+```
+
+This creates a new page at `Pages/Books.mds`.
+
+## When to use markdown pages
+
+Markdown pages are useful when you have a lot of similar pages with the same layout, where only the content differs. A classic example is a blog post or article. 
+
+## URL
+
+The URL of the page is derived from the file name. 
+
+`Pages/Articles/ValuePriceAndProfit.mds` has the path `/articles/value-price-and-profit`
+
+## Layout
+
+In markdown pages it’s required to specify a template. 
+
+The template is a Stencil component with a `<‎slot>` element that will be used as a [layout](/docs/v0/layouts). The slot element will be replaced with the content from the markdown file:
+
+```
+// Components/Layouts/Base.stencil
+<html>
+	<head>
+		// ...
+	</head>
+	<body>
+		<slot />
+	</body>
+</html>
+```
+
+In the markdown page the template is specified in frontmatter:
+
+```
+// Pages/Books/TheCivilWarInFrance.mds
+---
+template: Base
+---
+
+# The Civil War in France
+```
+
+## Components
+
+All [components](/docs/v0/components) and regular HTML elements can be used inside markdown pages. That means you can embed reusable elements like forms, charts or other visual elements in your content:
+
+```
+---
+template: Base
+---
+
+# The Civil War in France
+
+This critical examination of the Paris Commune of 1871 highlighted significant aspects of the conflict, its historical context, and its implications for revolutionary movements.
+
+<ImageWithCaption 
+	image="/images/the-civil-war-in-france.png" 
+	caption="'The Civil War in France' was published in 1871."
+/>
+```
+
+## Data
+
+It’s possible to define [custom data](/docs/v0/data#custom-data) via frontmatter. This is meta data that is mostly useful when referencing the page in other places like a loop.
+
+```
+---
+template: Base
+title: The Civil War in France
+year: 1871
+order: 1 
+---
+
+# The Civil War in France
+```
