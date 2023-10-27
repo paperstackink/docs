@@ -50,6 +50,7 @@
         >
             <div class="min-h-full w-3/4 bg-white px-2 py-2 md:px-8 md:py-3 md:w-2/5 lg:w-full lg:pb-8 lg:pt-9">
                 <a href="/">
+                    <span class="sr-only">Homepage</span>
                     <Logo class="w-9 h-9" />
                 </a>
 
