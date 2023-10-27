@@ -18,4 +18,15 @@ module.exports = {
 	*/
 
 	linkHeadlines: "wrap",
+
+	/*
+	|--------------------------------------------------------------------------
+	|   External links
+	|--------------------------------------------------------------------------
+	|
+	|   Specify whether you want to open external links in a new tab.
+	|
+	*/
+
+	openExternalLinksInNewTab: true,
 };
