@@ -13,14 +13,14 @@
         <meta property="og:title" content="{{ if title then title + ' | Paperstack' else 'Paperstack'}}" />
         <meta property="og:description" content="Static websites for the pragmatic programmer
         " />
-        <meta property="og:image" content="/og.png" />
+        <meta property="og:image" content="https://Paperstack.ink/og.png" />
 
         <!-- Twitter -->
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:title" content="{{ if title then title + ' | Paperstack' else 'Paperstack'}}" />
         <meta property="twitter:description" content="Static websites for the pragmatic programmer
         " />
-        <meta property="twitter:image" content="/og.png" />
+        <meta property="twitter:image" content="https://Paperstack.ink/og.png" />
 
         <!-- Styles -->
         <link rel="stylesheet" type="text/css" href="/style.css" />
