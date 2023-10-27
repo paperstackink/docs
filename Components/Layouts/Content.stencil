@@ -12,9 +12,11 @@
                         target="_blank"
                         class="block w-8 h-8 flex items-center justify-center"
                     >
+                        <span class="sr-only">Github repository</span>
                         <Github class="w-5 h-5 lg:text-gray-500 lg:hover:text-gray-900" />
                     </a>
                     <button type="button" class="block w-8 h-8 flex items-center justify-center lg:text-gray-500 lg:hover:text-gray-900">
+                        <span class="sr-only">Search</span>
                         <Search class="w-6 h-6" />
                     </button>
                     <button 
