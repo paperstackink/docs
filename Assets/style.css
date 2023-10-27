@@ -297,6 +297,7 @@
 .scrollbar::-webkit-scrollbar-track {
 	background-color: white;
 }
+
 .scrollbar-left::-webkit-scrollbar-track {
 	border-right: 1px solid theme("colors.gray.200");
 }
@@ -305,5 +306,11 @@
 }
 
 .scrollbar::-webkit-scrollbar-thumb {
-	background: theme("colors.gray.300");
+	background: theme("colors.gray.400");
+}
+
+@screen md {
+	.scrollbar::-webkit-scrollbar-thumb {
+		background: theme("colors.gray.300");
+	}
 }
