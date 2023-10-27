@@ -13,7 +13,7 @@ The main purpose of collection pages is to list related pages, i.e., all blog po
 
 ## Looping over pages
 
-Usually, you will render all links in a [loop](/docs/v0/loops). All pages are available through the `$pages` record.
+Usually, you will render all links in a [loop](/docs/v0/each-directive). All pages are available through the `$pages` record.
 
 ```
 @‎each(page in $pages.Articles.pages)
