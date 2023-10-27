@@ -25,6 +25,7 @@
                         class="block w-8 h-8 flex items-center justify-center lg:hidden"
                         @click="open = true"
                     >
+                        <span class="sr-only">Menu</span>
                         <Burger class="w-6 h-6" />
                     </button>
                 </nav>
