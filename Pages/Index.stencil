@@ -18,7 +18,7 @@
         <div class="inline-block relative z-[1]">
             <a 
                 href="/docs/v0/introducing-paperstack"
-                class="mt-6 bg-white inline-block font-medium border-2 border-gray-900 px-8 py-2 relative before:absolute before:block before:inset-0 before:border-2 before:border-gray-900 before:-translate-x-2 before:translate-y-2 before:z-[-1] active:translate-y-2 active:-translate-x-2 active:before:hidden"
+                class="mt-6 bg-white inline-block font-semibold border-2 border-gray-900 px-8 py-2 relative before:absolute before:block before:inset-0 before:border-2 before:border-gray-900 before:-translate-x-2 before:translate-y-2 before:z-[-1] active:translate-y-2 active:-translate-x-2 active:before:hidden"
             >
                 Documentation
             </a>
@@ -28,8 +28,8 @@
     <section class="mt-20 grid gap-y-8 px-2 md:mx-8 md:grid-cols-2 md:gap-x-16 md:items-center lg:max-w-[60rem] lg:mx-auto lg:gap-x-20">
         <div class="text-lg md:order-last">
             <h2 class="font-medium">Static components</h2>
-            <p class="mt-1">Make your own reusable HTML elements with components.</p>
-            <p class="mt-2">Compose small components together to create larger elements, sections and layouts.</p>
+            <p class="mt-1 text-gray-700">Make your own reusable HTML elements with components.</p>
+            <p class="mt-2 text-gray-700">Compose small components together to create larger elements, sections and layouts.</p>
         </div>
         <div 
             class="h-[20rem] bg-gray-100 rounded-lg flex items-center justify-center"
@@ -41,8 +41,8 @@
     <section class="mt-40 grid gap-y-8 px-2 md:mx-8 md:grid-cols-2 md:gap-x-16 md:items-center lg:max-w-[60rem] lg:mx-auto lg:gap-x-20">
         <div class="text-lg">
             <h2 class="font-medium">Markdown</h2>
-            <p class="mt-1">Write your content in markup or markdown. </p>
-            <p class="mt-2">You have access to all your components in both markup and markdown. This allows you to embed any markup or any of your reusable components inside your content.</p>
+            <p class="mt-1 text-gray-700">Write your content in markup or markdown. </p>
+            <p class="mt-2 text-gray-700">You have access to all your components in both markup and markdown. This allows you to embed any markup or any of your reusable components inside your content.</p>
         </div>
         <div class="h-[20rem] bg-gray-100 rounded-lg flex items-center justify-center">
             <ComingSoonIllustration />
@@ -52,8 +52,8 @@
     <section class="mt-40 pb-40 grid gap-y-8 px-2 md:mx-8 md:grid-cols-2 md:gap-x-16 md:items-center lg:max-w-[60rem] lg:mx-auto lg:gap-x-20">
         <div class="text-lg md:order-last">
             <h2 class="font-medium">Logic and loops</h2>
-            <p class="mt-1">Conditionally render content with @if directives.</p>
-            <p class="mt-2">Loop over data to dynamically create lists, menus or other collections with @each directives.</p>
+            <p class="mt-1 text-gray-700">Conditionally render content with @if directives.</p>
+            <p class="mt-2 text-gray-700">Loop over data to dynamically create lists, menus or other collections with @each directives.</p>
         </div>
         <div class="h-[20rem] bg-gray-100 rounded-lg flex items-center justify-center">
             <ComingSoonIllustration />

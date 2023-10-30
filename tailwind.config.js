@@ -13,9 +13,9 @@ module.exports = {
         accent: "#0000EE",
       },
       fontFamily: {
-        sans: ['"Favorit"', ...defaultTheme.fontFamily.sans],
+        sans: ['"Geist"', ...defaultTheme.fontFamily.sans],
         headline: ['"Inter"', ...defaultTheme.fontFamily.sans],
-        mono: ['"MonoLisa"', ...defaultTheme.fontFamily.mono],
+        mono: ['"Geist Mono"', ...defaultTheme.fontFamily.mono],
       },
       maxWidth: {
         prose: "60ch",

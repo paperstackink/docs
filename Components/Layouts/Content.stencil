@@ -59,7 +59,7 @@
                     <ul class="space-y-8">
                         @each(group in $pages.Index.groups)
                             <li>
-                                <h5 class="text-xs font-normal text-gray-600 hover:underline">
+                                <h5 class="text-xs font-medium text-gray-600 hover:underline">
                                     <a href="{{ $pages.Docs.V0.pages.filterBy('group', group).findBy('order', 1).path }}">
                                         {{ group }}
                                     </a>
