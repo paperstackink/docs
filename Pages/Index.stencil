@@ -8,8 +8,35 @@
             6: Assets
     </Data>
 
-    <header class="px-2 py-2 md:px-8 md:py-9">
+    <header class="flex justify-between items-center px-2 py-2 md:px-8 md:py-9">
         <Logo class="w-9 h-9" />
+
+        <nav class="flex space-x-2 lg:flex-row-reverse lg:space-x-reverse">
+            <a 
+                href="https://github.com/paperstackink/paperstack" 
+                target="_blank"
+                class="block w-8 h-8 flex items-center justify-center"
+            >
+                <span class="sr-only">Github repository</span>
+                <Github class="w-5 h-5 text-gray-500 lg:hover:text-gray-900" />
+            </a>
+            <button 
+                type="button" 
+                class="block w-8 h-8 flex items-center justify-center text-gray-500 lg:hover:text-gray-900"
+                @click="document.querySelector('[data-search] button').click()"
+            >
+                <span class="sr-only">Search</span>
+                <Search class="w-6 h-6" />
+            </button>
+            <button 
+                type="button" 
+                class="block w-8 h-8 flex items-center justify-center lg:hidden"
+                @click="open = true"
+            >
+                <span class="sr-only">Menu</span>
+                <Burger class="w-6 h-6 text-gray-500" />
+            </button>
+        </nav>
     </header>
 
     <div class="px-2 py-20 md:px-8 text-center">
