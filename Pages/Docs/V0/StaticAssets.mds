@@ -17,3 +17,4 @@ The `Assets` directory can contain subdirectories. All subdirectories will be pr
 | ------------------------ | ------------------ |
 | `Assets/sitemap.txt`     | `/sitemap.txt`     |
 | `Assets/images/hero.png` | `/images/hero.png` |
+[Mapping of source page files to paths]

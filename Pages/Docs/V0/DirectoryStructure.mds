@@ -15,7 +15,6 @@ The `Pages` directory is the source directory for all pages. It contains `.stenc
 
 You can nest pages inside subdirectories. The name of each subdirectory is added to the URL of the page.
 
-
 | Source file                                  | Path                            |
 | -------------------------------------------- | ------------------------------- |
 | `Pages/Index.stencil`                        | `/`                             |
@@ -23,7 +22,7 @@ You can nest pages inside subdirectories. The name of each subdirectory is added
 | `Pages/Articles/Index.stencil`               | `/articles`                     |
 | `Pages/Articles/Planning.stencil`            | `/articles/planning`            |
 | `Pages/Articles/January/Resolutions.stencil` | `/articles/january/resolutions` |
-
+[Mapping of source page files to paths]
 
 ## The Output directory
 
@@ -68,3 +67,4 @@ All files are copied into `Output` when building the site.
 | ------------------------ | ------------------ |
 | `Assets/sitemap.txt`     | `/sitemap.txt`     |
 | `Assets/images/hero.png` | `/images/hero.png` |
+[Mapping of asset files to paths]
