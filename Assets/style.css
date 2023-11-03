@@ -313,7 +313,7 @@
 	@apply sr-only;
 }
 
-.DocSearch-Modal {
+.DocSearch-Container {
 	position: fixed;
 	z-index: 999;
 	top: 3.25rem;
@@ -323,9 +323,39 @@
 	background: white;
 }
 
+.DocSearch-Modal {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+}
+
+.DocSearch-Dropdown {
+	flex: 1;
+}
+
 @screen md {
-	.DocSearch-Modal {
+	.DocSearch-Container {
 		top: 6.75rem;
+	}
+}
+
+@screen lg {
+	.DocSearch-Container {
+		inset: 0;
+		background: theme("colors.gray.900" / 30%);
+		display: flex;
+		justify-content: center;
+		padding: 4rem 0;
+	}
+
+	.DocSearch-Modal {
+		position: relative;
+		background: white;
+		width: 100%;
+		max-width: 30rem;
+		border-radius: 0.35rem;
+		overflow: hidden;
+		@apply shadow;
 	}
 }
 
@@ -358,6 +388,17 @@
 	margin-right: 0.25rem;
 }
 
+@screen lg {
+	.DocSearch-MagnifierLabel {
+		margin-left: 1rem;
+	}
+
+	.DocSearch-Reset:not([hidden]) {
+		margin-right: 0.75rem;
+		background-size: 60%;
+	}
+}
+
 .DocSearch-Reset svg {
 	display: none;
 }
@@ -368,6 +409,12 @@
 	padding: 0.5rem 2.5rem;
 	border-top: 1px solid theme("colors.gray.200");
 	border-bottom: 1px solid theme("colors.gray.200");
+}
+
+@screen lg {
+	.DocSearch-Input {
+		padding: 1rem 3.5rem;
+	}
 }
 
 .DocSearch-Input:focus {
@@ -399,6 +446,15 @@
 	padding-bottom: 0.25rem;
 }
 
+@screen lg {
+	.DocSearch-Hit-Container {
+		padding-left: 1rem;
+		padding-right: 0.75rem;
+		padding-top: 0.5rem;
+		padding-bottom: 0.5rem;
+	}
+}
+
 .DocSearch-Hit[aria-selected="true"] {
 	@apply bg-accent;
 }
@@ -411,6 +467,12 @@
 	@apply text-sm;
 	font-weight: medium;
 	color: theme("colors.gray.700");
+}
+
+@screen lg {
+	.DocSearch-Hit-title {
+		@apply text-base;
+	}
 }
 
 .DocSearch-Hit-title mark {
@@ -442,6 +504,12 @@
 	background-repeat: no-repeat;
 	background-position: center;
 	margin-right: 0.5rem;
+}
+
+@screen lg {
+	.DocSearch-Hit-icon {
+		margin-right: 1rem;
+	}
 }
 
 [aria-selected="true"] .DocSearch-Hit-icon {
@@ -531,7 +599,7 @@
 .DocSearch-Footer {
 	border-top: 1px solid theme("colors.gray.200");
 	border-bottom: 1px solid theme("colors.gray.200");
-	padding: 0.5rem 0;
+	padding: 0.75rem 0;
 }
 
 .DocSearch-Logo a {
@@ -539,6 +607,7 @@
 	justify-content: center;
 	align-items: center;
 	color: theme("colors.gray.700");
+	@apply text-sm;
 }
 
 .DocSearch-Logo svg {
