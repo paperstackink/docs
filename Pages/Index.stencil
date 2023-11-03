@@ -8,7 +8,7 @@
             6: Assets
     </Data>
 
-    <header class="flex justify-between items-center px-2 py-2 md:px-8 md:py-9">
+    <header x-data="" class="flex justify-between items-center px-2 py-2 md:px-8 md:py-9">
         <Logo class="w-9 h-9" />
 
         <nav class="flex space-x-2 lg:flex-row-reverse lg:space-x-reverse">
@@ -23,7 +23,7 @@
             <button 
                 type="button" 
                 class="block w-8 h-8 flex items-center justify-center text-gray-500 lg:hover:text-gray-900"
-                @click="document.querySelector('[data-search] button').click()"
+                @click="toggleSearch"
             >
                 <span class="sr-only">Search</span>
                 <Search class="w-6 h-6" />

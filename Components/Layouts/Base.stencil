@@ -13,7 +13,7 @@
         <meta property="og:title" content="{{ if title then title + ' | Paperstack' else 'Paperstack'}}" />
         <meta property="og:description" content="Static websites for the pragmatic programmer
         " />
-        <meta property="og:image" content="https://Paperstack.ink/og.png" />
+        <meta property="og:image" content="https://paperstack.ink/og.png" />
 
         <!-- Twitter -->
         <meta property="twitter:card" content="summary_large_image" />
@@ -47,10 +47,37 @@
         <!-- Alpine -->
         <script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/focus@3.x.x/dist/cdn.min.js"></script>
         <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+        <!-- Search -->
+        <link rel="preconnect" href="https://PX7V6M47QR-dsn.algolia.net" crossorigin />
+        <script src="https://cdn.jsdelivr.net/npm/@docsearch/js@3"></script>
     </head>
     <body class="scrollbar scrollbar-right font-sans bg-accent">
         <div class="bg-white min-h-screen relative">
             <slot />
         </div>
+
+        <div data-search></div>
+
+        <script type="text/javascript">
+          docsearch({
+            appId: 'PX7V6M47QR',
+            apiKey: '97a241ccf07d6070b1df528a7857bf87',
+            indexName: 'paperstack',
+            insights: true, 
+            container: '[data-search]',
+            debug: false 
+          });
+
+          function toggleSearch() {
+            if (document.querySelector('.DocSearch--active')) {
+                document.querySelector('.DocSearch-Cancel').click() 
+                document.body.classList.remove('overflow-y-hidden')
+            } else {
+                document.querySelector('[data-search] button').click()
+                document.body.classList.add('overflow-y-hidden')
+            }
+          }
+        </script>
     </body>
 </html>
