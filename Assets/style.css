@@ -321,7 +321,12 @@
 	right: 0;
 	bottom: 0;
 	background: white;
-	/*	background-color: theme(colors.gray.900 / 20%);*/
+}
+
+@screen md {
+	.DocSearch-Modal {
+		top: 6.75rem;
+	}
 }
 
 .DocSearch-Form {
