@@ -10,7 +10,7 @@ order: 4
 Most sites share some markup between pages. One way to avoid repeating that markup us to create layouts.
 
 ```
-// Components/Layouts/Base.stencil
+// components/layouts/Base.stencil
 <html>
 	<head>
 		<meta charset="UTF-8">
@@ -31,7 +31,7 @@ Most sites share some markup between pages. One way to avoid repeating that mark
 A common pattern is to create a `Base` layout that contains only the bare minimum that is reused across pages. That usually means stuff in the `<head>` tag:
 
 ```
-// Components/Layouts/Base.stencil
+// components/layouts/Base.stencil
 <html>
 	<head>
 		<link rel="stylesheet" type="text/css" href="/style.css" />
@@ -46,7 +46,7 @@ A common pattern is to create a `Base` layout that contains only the bare minimu
 All pages that use the `Base` layout now have access to the CSS and JS.
 
 ```
-// Pages/Index.stencil
+// pages/index.stencil
 <Base>
 	<h1 class="title">
 		Philosopher's Inkwell
@@ -64,7 +64,7 @@ Using the `Base` layout for one-off pages is useful. But some pages might share 
 A common pattern is to create layouts that extend other layouts. You might create a layout that includes the page navigation as well:
 
 ```
-// Components/Layouts/Page.stencil
+// components/layouts/Page.stencil
 <Base>
 	<nav>
 		<NavigationLink href="/">
@@ -87,7 +87,7 @@ A common pattern is to create layouts that extend other layouts. You might creat
 It can be a good idea to create several layouts with different granularity. You might create a layout specifically for articles:
 
 ```
-// Components/Layouts/Article.stencil
+// components/layouts/Article.stencil
 <Page>
 	<h1>{{ title }}</h1>
 

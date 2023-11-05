@@ -61,16 +61,16 @@
 
                 <nav class="mt-8 pb-12 lg:mt-9">
                     <ul class="space-y-8">
-                        @each(group in $pages.Index.groups)
+                        @each(group in $pages.index.groups)
                             <li>
                                 <h5 class="text-xs font-medium text-gray-600 hover:underline">
-                                    <a href="{{ $pages.Docs.V0.pages.filterBy('group', group).findBy('order', 1).path }}">
+                                    <a href="{{ $pages.docs.v0.$pages.filterBy('group', group).findBy('order', 1).path }}">
                                         {{ group }}
                                     </a>
                                 </h5>
 
                                 <ul class="space-y-3 mt-3">
-                                    @each(page in $pages.Docs.V0.pages.filterBy('group', group).sortBy('order'))
+                                    @each(page in $pages.docs.v0.$pages.filterBy('group', group).sortBy('order'))
                                         <li>
                                             <a href="{{ page.path }}" class="flex items-center leading-none hover:underline {{ if page.path equals $page.path then 'font-normal  before:block before:h-1 before:w-3 before:bg-gray-900 before:mr-2 before:-translate-y-px' else 'text-gray-700' }}">
                                                 {{ page.title }}
@@ -93,16 +93,16 @@
              <div class="flex justify-between mt-12 lg:max-w-prose lg:mx-auto">
                 <div>
                     @if($page.order not equals 1)
-                        <a href="{{ $pages.Docs.V0.pages.filterBy('group', group).findBy('order', $page.order - 1).path }}" class="flex leading-none text-sm font-medium">
+                        <a href="{{ $pages.docs.v0.$pages.filterBy('group', group).findBy('order', $page.order - 1).path }}" class="flex leading-none text-sm font-medium">
                             <ChevronLeft class="text-gray-800 mr-2 w-3 h-3" />
-                            <span>{{ $pages.Docs.V0.pages.filterBy('group', group).findBy('order', $page.order - 1).title }}</span>
+                            <span>{{ $pages.docs.v0.$pages.filterBy('group', group).findBy('order', $page.order - 1).title }}</span>
                         </a>     
                     @endif       
                 </div>
                 <div>
-                    @if($page.order not equals ($pages.Docs.V0.pages.filterBy('group', group).size))
-                        <a href="{{ $pages.Docs.V0.pages.filterBy('group', group).findBy('order', $page.order + 1).path }}" class="flex leading-none text-sm font-medium">
-                            <span>{{ $pages.Docs.V0.pages.filterBy('group', group).findBy('order', $page.order + 1).title }}</span>
+                    @if($page.order not equals ($pages.docs.v0.$pages.filterBy('group', group).size))
+                        <a href="{{ $pages.docs.v0.$pages.filterBy('group', group).findBy('order', $page.order + 1).path }}" class="flex leading-none text-sm font-medium">
+                            <span>{{ $pages.docs.v0.$pages.filterBy('group', group).findBy('order', $page.order + 1).title }}</span>
                             <ChevronRight class="text-gray-800 ml-2 w-3 h-3" />
                         </a>     
                     @endif               

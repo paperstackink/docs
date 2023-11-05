@@ -7,7 +7,7 @@ order: 3
 
 # Collections
 
-Collection pages serve as an index for other pages. It could be the home page or `/articles`.
+Collection pages serve as an index for other pages. It could be the home page or `/books`.
 
 The main purpose of collection pages is to list related pages, i.e., all blog posts or all articles in a specific category.
 
@@ -16,7 +16,7 @@ The main purpose of collection pages is to list related pages, i.e., all blog po
 Usually, you will render all links in a [loop](/docs/v0/each-directive). All pages are available through the `$pages` record.
 
 ```
-@‎each(page in $pages.Articles.pages)
+@‎each(page in $pages.books.$pages)
 	<a href="{‎{ page.path }}">
 		{‎{ page.name.titleCase() }}
 	</a>
@@ -26,7 +26,7 @@ Usually, you will render all links in a [loop](/docs/v0/each-directive). All pag
 It prints the title-case version of the file name. If you wish to customise the title, you can add [custom data](/docs/v0/data#custom-data) to each page.
 
 ```md
-// Pages/Articles/ValuePriceAndProfit.mds
+// pages/books/value-price-and-profit.mds
 ---
 layout: Base
 title: Value, Price and Profit
@@ -36,8 +36,8 @@ title: Value, Price and Profit
 ```
 
 ```html
-// Pages/Articles/Index.stencil
-@‎each(page in $pages.Articles.pages)
+// pages/books/index.stencil
+@‎each(page in $pages.books.$pages)
 	<a href="{‎{ page.path }}">
 		{‎{ page.title }}
 	</a>
@@ -49,7 +49,7 @@ title: Value, Price and Profit
 Items in `$pages` are sorted in alphabetical order. You likely want to order pages either by date or by a custom sort order.
 
 ```
-// Pages/Articles/ValuePriceAndProfit.mds
+// pages/books/value-price-and-profit.mds
 ---
 layout: Base
 title: Value, Price and Profit
@@ -63,7 +63,7 @@ order: 1
 The pages can now be sorted by date:
 
 ```
-@‎each(page in $pages.Articles.pages.sortBy('date'))
+@‎each(page in $pages.books.$pages.sortBy('date'))
 	<a href="{‎{ page.path }}">
 		{‎{ page.title }}
 	</a>
@@ -73,7 +73,7 @@ The pages can now be sorted by date:
 Or by sort order:
 
 ```
-@‎each(page in $pages.Articles.pages.sortBy('order'))
+@‎each(page in $pages.books.$pages.sortBy('order'))
 	<a href="{‎{ page.path }}">
 		{‎{ page.title }}
 	</a>
@@ -85,7 +85,7 @@ Or by sort order:
 In some cases, you might only want to show certain pages:
 
 ```
-// Pages/Articles/ValuePriceAndProfit.mds
+// pages/books/value-price-and-profit.mds
 ---
 layout: Base
 featured: true
@@ -95,7 +95,7 @@ featured: true
 ```
 
 ```
-@‎each(page in $pages.Articles.pages.filterBy('featured', true))
+@‎each(page in $pages.books.$pages.filterBy('featured', true))
 	<a href="{‎{ page.path }}">
 		{‎{ page.title }}
 	</a>

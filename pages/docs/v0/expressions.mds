@@ -23,6 +23,8 @@ You can do math:
 {‎{ 1 + 2 * 3 / 4 }}
 ```
 
+> When subtracting numbers, it's required to add whitespace around '-'. This is because '-' can also be used in identifiers like this: `$pages.blog-posts`.
+
 You can do less than/greater than:
 
 ```

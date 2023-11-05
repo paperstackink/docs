@@ -11,6 +11,6 @@ order: 4
 
 ```
 @‎if(1 greater than 2)
-	<p>I will not be rendered</p>
+    <p>I will not be rendered</p>
 @‎endif
 ```

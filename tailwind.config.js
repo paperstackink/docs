@@ -5,7 +5,7 @@ module.exports = {
   content: [
     // "./Pages/**/*.{md,mds,markdown,stencil}",
     // "./Components/**/*.{md,mds,markdown,stencil}",
-    "./Output/**/*.html",
+    "./output/**/*.html",
   ],
   theme: {
     extend: {

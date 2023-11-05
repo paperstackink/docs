@@ -11,32 +11,32 @@ On every page and component, a number of [records](/docs/v0/records) are availab
 
 ## $pages
 
-`$pages` contains information about the `Pages` directory. It mirrors the structure of `Pages` so you can access a subdirectory:
+`$pages` contains information about the `pages` directory. It mirrors the structure of `pages` so you can access a subdirectory:
 
 ```
-$pages.Articles
+$pages.articles
 ```
 
 Or you can access a deeply nested page:
 
 ```
-$pages.Articles.HowToBuildAWebsite
+$pages.articles.how-to-build-a-website
 ```
 
 `$pages` can be used to dynamically render a list of links on a collection page or in a navigation with a [loop](/docs/v0/each-directive).
 
 A subdirectory in `$pages` contains information about all the nested pages and directories inside that directory.
 
-If you want to only access pages inside a directory, there is a property on the record called `pages`:
+If you want to only access pages inside a directory, there is a property on the record called `$pages`:
 
 ```
-$pages.Articles.pages
+$pages.articles.$pages
 ```
 
-If you want to access all pages in that directory or in any subdirectories, you can use `allPages`:
+If you want to access all pages in that directory or in any subdirectories, you can use `$allPages`:
 
 ```
-$pages.Articles.allPages
+$pages.articles.$allPages
 ```
 
 Similar properties exist for directories.
@@ -57,7 +57,7 @@ Similar properties exist for directories.
 `$attributes` is only available inside a component and contains all attributes that were passed to the component. It’s mostly useful for debugging purposes or to apply all attributes to a nested element in the component:
 
 ```
-// Components/ButtonWithHelp.stencil
+// components/ButtonWithHelp.stencil
 <div>
 	<button #bind="$attributes">
 		<slot />
@@ -71,7 +71,7 @@ Similar properties exist for directories.
 
 ## $config
 
-`$config` contains all configuration from the `Config` directory.
+`$config` contains all configuration from the `config` directory.
 
 
 ## Custom data
