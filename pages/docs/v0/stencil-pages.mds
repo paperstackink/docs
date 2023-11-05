@@ -1,0 +1,104 @@
+---
+layout: Content
+group: Pages
+title: Stencil pages
+order: 1
+---
+
+# Stencil pages
+
+You can create a new Stencil page by running the following command in a terminal:
+
+```
+paper make:page /books --layout=Base
+```
+
+This creates a new page at `Pages/Books.stencil`.
+
+
+## When to use Stencil pages
+
+Stencil pages are useful for pages with a unique layout, like the home page. 
+
+Stencil pages are also useful for [collection pages](/docs/v0/collections).
+
+> Unique pages might share a base layout with other pages but the content of the page isn’t structured rigidly like on an article page.
+
+
+## URL
+
+The URL of the page is derived from the file name. 
+
+`Pages/Articles/ValuePriceAndProfit.stencil` has the path `/articles/value-price-and-profit`
+
+
+## Layout
+
+Most pages will use an existing [layout](/docs/v0/layouts):
+
+```
+<Base>
+	<h1>Books</h1>‎ 
+</Base>
+```
+
+If a page doesn’t share any markup with other pages, it can use custom HTML.
+
+```
+<html>
+	<head>
+		// ...
+	</head>
+	<body>
+		<h1>Books</h1>
+	</body>
+</html>
+```
+
+
+## Components
+
+A stencil page has access to all components. You might have common UI elements as [components](/docs/v0/components):
+
+```
+<Base>‎ 
+	<Headline1>Books</Headline1>
+
+	<Paragraph>...</Paragraph>
+	
+	<List>
+		<ListItem>Wage Labour and Capital</ListItem>
+		<ListItem>Value, Price and Profit</ListItem>
+		<ListItem>The Holy Family</ListItem>
+	<List>
+</Base>
+```
+
+It’s also common to have reusable sections as components:
+
+```
+<Base>‎ 
+	<Headline1>Features</Headline1>
+
+	<TextWithImage title="Rich data" image="/images/rich-data.png">
+		<Paragraph>...</Paragraph>
+	<TextWithImage>
+</Base>
+```
+
+
+## Data
+
+It’s possible to define [custom data](/docs/v0/data#custom-data) for a Stencil page. This is metadata that is mostly useful when referencing the page in other places, like a loop.
+
+```
+<Base>
+	<Data>
+		title: The Poverty of Philosophy
+		year: 1847
+		order: 1 
+	</Data>
+
+	<Headline1>Books</Headline1>
+</Base>
+```

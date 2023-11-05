@@ -1,0 +1,20 @@
+---
+layout: Content
+group: Assets
+title: Static assets
+order: 1
+---
+
+# Static assets
+
+The `Assets` directory contains static resources like fonts, icons, images and miscellaneous files like `sitemap.txt`.
+
+All files are copied into `Output` when building the site.
+
+The `Assets` directory can contain subdirectories. All subdirectories will be preserved when building the site.
+
+| Source file              | Path               |
+| ------------------------ | ------------------ |
+| `Assets/sitemap.txt`     | `/sitemap.txt`     |
+| `Assets/images/hero.png` | `/images/hero.png` |
+[Mapping of source page files to paths]
