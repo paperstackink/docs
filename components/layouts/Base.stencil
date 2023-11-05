@@ -72,10 +72,8 @@
           function toggleSearch() {
             if (document.querySelector('.DocSearch--active')) {
                 document.querySelector('.DocSearch-Cancel').click() 
-                document.body.classList.remove('overflow-y-hidden')
             } else {
                 document.querySelector('[data-search] button').click()
-                document.body.classList.add('overflow-y-hidden')
             }
           }
         </script>

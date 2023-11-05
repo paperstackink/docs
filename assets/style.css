@@ -630,6 +630,10 @@
 	color: theme("colors.gray.700");
 }
 
+.DocSearch--active {
+	overflow-y: hidden;
+}
+
 :target {
 	scroll-margin-top: 7.5rem;
 }
