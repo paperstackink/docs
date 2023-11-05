@@ -51,6 +51,9 @@
         <!-- Search -->
         <link rel="preconnect" href="https://PX7V6M47QR-dsn.algolia.net" crossorigin />
         <script src="https://cdn.jsdelivr.net/npm/@docsearch/js@3"></script>
+
+        <!-- Fathom -->
+        <script src="https://cdn.usefathom.com/script.js" data-site="MKSNCKFI" defer></script>
     </head>
     <body class="scrollbar scrollbar-right font-sans bg-accent">
         <div class="bg-white min-h-screen relative">
