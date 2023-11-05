@@ -14,7 +14,7 @@ Components are your own reusable HTML elements. They can be mixed with normal HT
 **Low-level UI elements**: These are small, reusable elements that might appear on any page. It could be headlines, buttons, form elements or icons. They are especially useful when using Tailwind because you avoid repeating the classes everywhere.
 
 ```
-// Components/Button.stencil
+// components/Button.stencil
 <button class="bg-gray-900 text-gray-100 rounded px-4 py-2">
 	<slot />
 </button>
@@ -23,7 +23,7 @@ Components are your own reusable HTML elements. They can be mixed with normal HT
 **Sections**: These types of components are a larger block of markup that forms a section on a page. It could be cards, a newsletter signup form, or an author section.
 
 ```
-// Components/Card.stencil
+// components/Card.stencil
 <div>
 	<h3>{{ title }}</h3>
 
@@ -41,19 +41,19 @@ Components are your own reusable HTML elements. They can be mixed with normal HT
 
 ## Defining components
 
-All components are defined in the `Components`directory. Each file represents one component, and the file name is the component name.
+All components are defined in the `components` directory. Each file represents one component, and the file name is the component name.
 
 > Component names should start with an uppercase letter to distinguish them from regular HTML elements. `<‎Button>` refers to a component while `<‎button>` refers to the HTML button element.
 
 Components can be nested in subdirectories, but that won’t affect how the component is used. The purpose of nesting components in subdirectories is solely for organisation.
 
-> All component names must be unique across your project, since components are automatically imported. You can’t have a `Component/Dark/Button.stencil` component and a `Component/Light/Button.stencil` component in the same project.   Instead, you can have `Component/Dark/DarkButton.stencil` and `Component/Light/LightButton.stencil` components.
+> All component names must be unique across your project, since components are automatically imported. You can’t have a `components/dark/Button.stencil` component and a `components/light/Button.stencil` component in the same project.   Instead, you can have `components/dark/DarkButton.stencil` and `components/light/LightButton.stencil` components.
 
 ## Using components
 
 Components can be used in other components or in pages, both markdown and Stencil pages. All components are globally available without needing to be imported.
 
-`Components/Button.stencil` can be used like this:
+`components/Button.stencil` can be used like this:
 
 ```
 <Button>
@@ -68,7 +68,7 @@ It’s possible to modify each instance of a component with [attributes](/docs/v
 The most common use case for attributes is to pass in data that should be rendered:
 
 ```
-// Components/ImageWithDescription.stencil
+// components/ImageWithDescription.stencil
 <div>
 	<img src="{‎{ image }}" />
 	<p>{‎{ description }}</p>
@@ -76,7 +76,7 @@ The most common use case for attributes is to pass in data that should be render
 ```
 
 ```
-// Pages/Index.stencil
+// pages/index.stencil
 <ImageWithDescription
 	image="/images/books/value-price-and-profit.png"
 	description="Value, Price and Profit is an economic exploration of the relationship between the value of commodities, their market prices and labor."
@@ -86,7 +86,7 @@ The most common use case for attributes is to pass in data that should be render
 Another common use case is to use an attribute to modify how the component renders:
 
 ```
-// Components/ImageWithDescription.stencil
+// components/ImageWithDescription.stencil
 <div>
 	<img src="{‎{ image }}" />
 	@‎if(description)
@@ -104,14 +104,14 @@ Slots can also modify how the component renders. Using attributes, it’s not po
 Any children of the component will be inserted into the `<‎slot />` element.
 
 ```
-// Components/Button.stencil
+// components/Button.stencil
 <button class="bg-gray-900 text-gray-100 rounded px-4 py-2">
 	<slot />
 </button>
 ```
 
 ```
-// Pages/Index.stencil
+// pages/index.stencil
 <Button>
 	<ArrowUpIcon />
 	<span>Click me</span>
@@ -119,7 +119,7 @@ Any children of the component will be inserted into the `<‎slot />` element.
 ```
 
 ```
-// Output/index.html
+// output/index.html
 <button class="bg-gray-900 text-gray-100 rounded px-4 py-2">
 	<svg>...</svg>
 	<span>Click me</span>

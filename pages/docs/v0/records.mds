@@ -16,7 +16,7 @@ Records can be looped in with [@each](/docs/v0/each-directive).
 `sortBy` sorts all the properties of a record based on a field:
 
 ```
-$pages.Articles.pages.sortBy('name', 'descending')
+$pages.articles.$pages.sortBy('name', 'descending')
 ```
 
 ## filterBy
@@ -24,7 +24,7 @@ $pages.Articles.pages.sortBy('name', 'descending')
 `filterBy` removes items from a record based on the field and operator:
 
 ```
-$pages.Articles.pages.filterBy('name', 'not equals', 'Index')
+$pages.articles.$pages.filterBy('name', 'not equals', 'Index')
 ```
 
 The 2nd parameter is the operator to use for the check. The following operators are valid:
@@ -49,7 +49,7 @@ If the operator requires a value to compare against, that is the  3rd parameter.
 `findBy` finds the first property of a record that matches the criteria:
 
 ```
-$pages.Articles.pages.findBy('name', 'equals', 'Index')
+$pages.articles.$pages.findBy('name', 'equals', 'Index')
 ```
 
 The 2nd parameter is the operator to use for the check. The following operators are valid:

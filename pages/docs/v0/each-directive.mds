@@ -10,17 +10,17 @@ order: 5
 Records can be looped with the `@each` directive.
 
 ```
-@‎each(item in $pages.Articles.pages)
+@‎each(item in $pages.articles.$pages)
 	<a href="item.path">{‎{ item.name.titleCase() }}</a>
 @‎endeach
 ```
  
-> If a record has any non-record properties it cannot be looped. `$pages.Articles` has properties like `isDirectory` which is a boolean. Therefore you must first [filter](/docs/v0/records#filterby) the record to remove any non-record properties. In `$pages` all directories have [subdirectories](/docs/v0/data#pages) where pages and directories are pre-filtered.
+> If a record has any non-record properties it cannot be looped. `$pages.articles` has properties like `isDirectory` which is a boolean. Therefore you must first [filter](/docs/v0/records#filterby) the record to remove any non-record properties. In `$pages` all directories have [subdirectories](/docs/v0/data#pages) where pages and directories are pre-filtered.
 
 It’s also possible to access the index of the loop:
 
 ```
-@‎each(item, index in $pages.Articles.pages)
+@‎each(item, index in $pages.articles.$pages)
 	@‎if(index less than 5)
 		<a href="item.path">{‎{ item.name.titleCase() }}</a>
 	@‎endif

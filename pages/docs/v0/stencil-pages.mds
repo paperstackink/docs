@@ -13,7 +13,7 @@ You can create a new Stencil page by running the following command in a terminal
 paper make:page /books --layout=Base
 ```
 
-This creates a new page at `Pages/Books.stencil`.
+This creates a new page at `pages/books.stencil`.
 
 
 ## When to use Stencil pages
@@ -29,7 +29,7 @@ Stencil pages are also useful for [collection pages](/docs/v0/collections).
 
 The URL of the page is derived from the file name. 
 
-`Pages/Articles/ValuePriceAndProfit.stencil` has the path `/articles/value-price-and-profit`
+`pages/articles/value-price-and-profit.stencil` has the path `/articles/value-price-and-profit`
 
 
 ## Layout

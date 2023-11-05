@@ -1,7 +1,7 @@
 ---
 layout: Content
 group: Getting started
-title: Deployment
+title: Deployments
 order: 6
 ---
 
@@ -11,7 +11,7 @@ Paperstack websites are just a collection of `.html` files and any assets you’
 
 ## Building the site
 
-Whether you build the site on the server or locally, Node@20.1 is required.
+Whether you build the site on the server or locally, `Node@20.1` is required.
 
 To build the site, run the following command:
 
@@ -19,4 +19,4 @@ To build the site, run the following command:
 npm run build
 ```
 
-This creates an `Output` directory containing all the `.html` files and assets.
+This creates an `output` directory containing all the `.html` files and assets.

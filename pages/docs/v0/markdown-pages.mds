@@ -10,10 +10,10 @@ order: 2
 You can create a new markdown page by running the following command in a terminal:
 
 ```
-paper make:page /books --layout=Base --markdown
+paper make:page /books/value-price-and-profit --layout=Base --markdown
 ```
 
-This creates a new page at `Pages/Books.mds`.
+This creates a new page at `pages/books/value-price-and-profit.mds`.
 
 ## When to use markdown pages
 
@@ -23,7 +23,7 @@ Markdown pages are useful when you have a lot of similar pages with the same lay
 
 The URL of the page is derived from the file name. 
 
-`Pages/Articles/ValuePriceAndProfit.mds` has the path `/articles/value-price-and-profit`
+`pages/books/value-price-and-profit.mds` has the path `/books/value-price-and-profit`
 
 ## Layout
 
@@ -32,7 +32,7 @@ On markdown pages, it’s required to specify a layout.
 The `layout` is a Stencil component with a `<‎slot>` element that will be used as a [layout](/docs/v0/layouts). The content from the markdown file will be inserted into the `<slot />` element.
 
 ```
-// Components/Layouts/Base.stencil
+// components/layouts/Base.stencil
 <html>
 	<head>
 		// ...
@@ -46,7 +46,7 @@ The `layout` is a Stencil component with a `<‎slot>` element that will be used
 On a markdown page, the layout is specified in front matter:
 
 ```
-// Pages/Books/TheCivilWarInFrance.mds
+// pages/books/the-civil-war-in-france.mds
 ---
 layout: Base
 ---

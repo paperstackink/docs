@@ -13,14 +13,14 @@ The `is` attribute is the name of a component in your project. Any other attribu
 It can be used to dynamically render an icon:
 
 ```
-// Pages/Index.stencil
+// pages/index.stencil
 <ButtonWithIcon icon="ArrowUp">
 	Click me
 </ButtonWithIcon>
 ```
 
 ```
-// Components/ButtonWithIcon.stencil
+// components/ButtonWithIcon.stencil
 <button class="text-gray-900">
 	<Component
 		class="w-4 h-4 text-gray-700"
@@ -33,8 +33,8 @@ It can be used to dynamically render an icon:
 It might be useful to bind all properties of a record as attributes:
 
 ```
-// Pages/Index.stencil
-@‎each(page in $pages.Articles)
+// pages/index.stencil
+@‎each(page in $pages.articles.$pages)
 	<Component
 		is="{‎{ page.component }}"
 		#bind="page"

@@ -12,7 +12,7 @@ You can use any CSS solution you want. The starter template uses [Tailwind CSS](
 Tailwind is imported via CDN:
 
 ```
-// Components/Layouts/Base.stencil
+// components/layouts/Base.stencil
 <html>
 	<head>
 		<script src="https://cdn.tailwindcss.com"></script>
@@ -28,18 +28,18 @@ Tailwind is imported via CDN:
 If you want to run Tailwind locally and utilise the JIT engine, you can do the following:
 
 1. Follow the instructions on how to use the [Tailwind CLI tool](https://tailwindcss.com/docs/installation)
-2. Create a `style.css` file in the `Assets` directory
+2. Create a `style.css` file in the `assets` directory
 	```
 	@tailwind base;
 	@tailwind components;
 	@tailwind utilities;
 	```
-3. Update `tailwind.config.js` to watch for content in the `Output` directory
+3. Update `tailwind.config.js` to watch for content in the `output` directory
 	```
 	// tailwind.config.js
 	module.exports = {
 		content: [
-			"./Output/**/*.html",
+			"./output/**/*.html",
 		],
 	}
 	```
@@ -49,8 +49,8 @@ If you want to run Tailwind locally and utilise the JIT engine, you can do the f
 		"scripts": {
 			"build": "./node_modules/.bin/paper build",
 			"dev": "./node_modules/.bin/paper dev",
-			"styles:watch": "npx tailwindcss -i ./Assets/style.css -o ./Output/style.css --watch",
-			"styles:build": "npx tailwindcss -i ./Assets/style.css -o ./Output/style.css"
+			"styles:watch": "npx tailwindcss -i ./assets/style.css -o ./output/style.css --watch",
+			"styles:build": "npx tailwindcss -i ./assets/style.css -o ./output/style.css"
 		}
 	}
 	```
@@ -60,17 +60,17 @@ If you want to run Tailwind locally and utilise the JIT engine, you can do the f
 
 ## Plain CSS
 
-If you want to write plain CSS without processing, you can add a `.css` file to the `Assets` directory.
+If you want to write plain CSS without processing, you can add a `.css` file to the `assets` directory.
 
 ```
-// Assets/style.css
+// assets/style.css
 body {
 	background: red;	
 }
 ```
 
 ```
-// Components/Layouts/Base.stencil
+// components/layouts/Base.stencil
 <html>
 	<head>
 		<link rel="stylesheet" type="text/css" href="/style.css" />
@@ -84,6 +84,6 @@ body {
 
 ## Other CSS solutions
 
-If your CSS solution has a build step, then you can set the `Output` directory as the output for the generated CSS. If the solution supports watching files, it should also watch `Output`.
+If your CSS solution has a build step, then you can set the `output` directory as the output for the generated CSS. If the solution supports watching files, it should also watch `output`.
 
 > More CSS solutions will be interated into Paperstack. If you are unsure how to implement your CSS stack you can [reach out](https://twitter.com/bjornlindholmdk) or [create a new issue](https://github.com/paperstackink/paperstack/issues/new).

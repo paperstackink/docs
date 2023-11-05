@@ -1,0 +1,16 @@
+---
+layout: Content
+group: Templates
+title: '@if directive'
+order: 4
+---
+
+# @if directives
+
+`@if` directives can conditionally render content. You can provide it an [expression](/docs/v0/expressions), and it will determine whether to render the content inside.
+
+```
+@‎if(1 greater than 2)
+    <p>I will not be rendered</p>
+@‎endif
+```
