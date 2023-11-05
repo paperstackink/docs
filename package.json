@@ -12,7 +12,7 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "@paperstack/paperstack": "^0.6.0"
+    "@paperstack/paperstack": "^0.7.0"
   },
   "devDependencies": {
     "tailwindcss": "^3.3.3"
