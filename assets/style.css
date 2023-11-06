@@ -8,7 +8,6 @@
 		font-family: "Geist";
 		font-style: normal;
 		font-weight: 100 900;
-		font-display: swap;
 		src: url("/fonts/GeistVF.woff2") format("woff2");
 		font-named-instance: "Regular";
 	}
@@ -17,7 +16,6 @@
 		font-family: "Geist Mono";
 		font-style: normal;
 		font-weight: 100 900;
-		font-display: swap;
 		src: url("/fonts/GeistMonoVF.woff2") format("woff2");
 		font-named-instance: "Regular";
 	}
@@ -26,7 +24,6 @@
 		font-family: "Inter";
 		font-style: normal;
 		font-weight: 100 900;
-		font-display: swap;
 		src: url("/fonts/Inter-Variable.ttf") format("truetype");
 		font-named-instance: "Regular";
 	}
@@ -37,7 +34,6 @@
 	/* Geist */
 	@font-face {
 		font-named-instance: Regular;
-		font-display: swap;
 		font-family: "Geist";
 		font-style: normal;
 		font-weight: 400;
@@ -46,7 +42,6 @@
 
 	@font-face {
 		font-named-instance: Medium;
-		font-display: swap;
 		font-family: "Geist";
 		font-style: normal;
 		font-weight: 500;
@@ -55,7 +50,6 @@
 
 	@font-face {
 		font-named-instance: SemiBold;
-		font-display: swap;
 		font-family: "Geist";
 		font-style: normal;
 		font-weight: 600;
@@ -64,7 +58,6 @@
 
 	@font-face {
 		font-named-instance: Bold;
-		font-display: swap;
 		font-family: "Geist";
 		font-style: normal;
 		font-weight: 700;
@@ -74,7 +67,6 @@
 	/* Geist Mono */
 	@font-face {
 		font-named-instance: Regular;
-		font-display: swap;
 		font-family: "Geist Mono";
 		font-style: normal;
 		font-weight: 300;
@@ -82,7 +74,6 @@
 	}
 	@font-face {
 		font-named-instance: Regular;
-		font-display: swap;
 		font-family: "Geist Mono";
 		font-style: normal;
 		font-weight: 400;
@@ -91,7 +82,6 @@
 
 	@font-face {
 		font-named-instance: Medium;
-		font-display: swap;
 		font-family: "Geist Mono";
 		font-style: normal;
 		font-weight: 500;
@@ -101,7 +91,6 @@
 	/* Inter */
 	@font-face {
 		font-named-instance: Black;
-		font-display: swap;
 		font-family: "Inter";
 		font-style: normal;
 		font-weight: 900;
